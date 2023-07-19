@@ -17,7 +17,9 @@ body{
     position: absolute;
     left: 50px;
     top: 40px;
-}
+    width: 150px;
+    height: 150px;
+    }
 
 .botones_movimiento{
     position: absolute;
@@ -34,11 +36,11 @@ body{
     height: 70px;
 }
 
-.botones_movimiento button i{
+/*.botones_movimiento button i{
     position: absolute;
     
     cursor: pointer;
-}
+}*/
 
 .fire{
     position: absolute;
