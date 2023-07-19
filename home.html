@@ -1,16 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hide_in_the-World-Home</title>
+    <title>Hide_in_the_World_Play</title>
     <link rel="stylesheet" href="style.css" />
-    
-    
+
+    <style>
+        .warning {
+            font-size: 25px;
+            margin-top: -10px;
+        }
+
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+            height: auto;
+            background-image: url("https://ibb.co/gtzSsWM");
+            background-size: cover;
+        }
+    </style>
 </head>
+
 <body>
 
+    <div id="logo"></div>
 
-    <script src="script.js"></script>        
+    <h1>Hide in the World Play</h1>
+
+    <form id="start-form">
+        <label for="player">Player (required):</label>
+        <input type="text" id="player" name="player" required><br><br>
+
+        <div id="players-section">
+            <div id="players-list">
+                <h3>Players:</h3>
+                <ul id="player-names"></ul>
+            </div>
+
+            <div id="chosen-players">
+                <h3>Chosen Players:</h3>
+                <ul id="chosen-player-names"></ul>
+            </div>
+        </div>
+
+        <div class="warning">
+            <h1><strong>Warning!</strong></h1>
+        </div>
+
+        <div class="warning">
+            <h6>We are not responsible for any traumas caused by this game.</h6>
+        </div>
+
+        <div class="warning">
+            <h6>Please do not play if you are under 18 years old.</h6>
+        </div>
+
+        <button type="submit">PLAY</button>
+    </form>
+
+    <script src="script.js"></script>
+    <script>
+        const form = document.getElementById("start-form");
+        const playerInput = document.getElementById("player");
+        const playerNamesList = document.getElementById("player-names");
+        const chosenPlayerNamesList = document.getElementById("chosen-player-names");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const playerName = playerInput.value.trim();
+            if (playerName !== "") {
+                const listItem = document.createElement("li");
+                listItem.textContent = playerName;
+                chosenPlayerNamesList.appendChild(listItem);
+                playerInput.value = "";
+            }
+        });
+
+        playerInput.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) { // 13 is the key code for "Enter" key
+                form.dispatchEvent(new Event('submit'));
+            }
+        });
+    </script>
 </body>
+
 </html>
