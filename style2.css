@@ -97,15 +97,6 @@ body{
 
 
 
-
-
-.div img fondo {
-    width="100px"
-    height="100px"
-}
-
-
-
 #colombia{
     background-repeat: no-repeat;
     background-size:cover;
@@ -128,8 +119,7 @@ body{
         height: 90vh;
         justify-content: center;
     }
-    #colombia :hover{
-        
+    #colombia :hover{        
         fill: aqua;
     }
 .desktop {
