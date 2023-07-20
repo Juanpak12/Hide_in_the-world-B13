@@ -46,3 +46,67 @@ body{
     top: 500px;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat( auto-fit,
+        minmax (150px, 1fr )
+        );
+}
+
+.div image {
+    width: 100%;
+    height: auto;
+}
+
+
