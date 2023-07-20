@@ -3,7 +3,9 @@ body{
     margin: 0%;
     background: url("https://i.ibb.co/gTyQy8p/gif-de-la-muete.gif");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
+    background-position: center;
+    background-color: black;
 }
 
 .mundo{
@@ -13,7 +15,7 @@ body{
 
 }
 
-#logo{
+.logo{
     position: absolute;
     left: 50px;
     top: 40px;
@@ -97,16 +99,62 @@ body{
 
 
 
-.container {
-    display: grid;
-    grid-template-columns: repeat( auto-fit,
-        minmax (150px, 1fr )
-        );
-}
-
-.div image {
-    width: 100%;
-    height: auto;
+.div img fondo {
+    width="100px"
+    height="100px"
 }
 
 
+
+#colombia{
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+    body{
+        background-size:cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    #colombia{
+        fill:#f0e68c ;
+        stroke: #8b4513;
+        stroke-width: 2px;    
+        background-size: cover;
+        width: 100vw;
+        height: 90vh;
+        justify-content: center;
+    }
+    #colombia :hover{
+        
+        fill: aqua;
+    }
+.desktop {
+    display: none;
+}
+.tablet {
+    display: none;
+}
+}
+
+/*@media (min-width: 820px) and (max-width: 990px) {
+    .desktop {
+        display: none;
+    }
+    .movil {
+        display: none;
+    }
+}
+
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
+    }
+
+    .movil {
+        display: none;
+    }
+}
