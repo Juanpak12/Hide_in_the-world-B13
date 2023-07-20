@@ -113,7 +113,7 @@ body{
 
 }
 
-@media (min-width: 375px) and (max-width: 767px) {
+@media (min-width: 370px) and (max-width: 700px) {
     body{
         background-size:cover;
         width: 100vw;
