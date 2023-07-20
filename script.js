@@ -42,6 +42,7 @@ form.addEventListener("submit", function (event) {
     }
 });
 
+
 playerInput.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) { // 13 is the key code for "Enter" key
         form.dispatchEvent(new Event('submit'));
