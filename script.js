@@ -20,3 +20,21 @@ playerInput.addEventListener("keyup", function (event) {
         form.dispatchEvent(new Event('submit'));
     }
 });
+
+// Button play
+
+var playbutton = document.getElementById("playbutton");
+var gamecontainer = document.getElementById("gamecontainer");
+
+playbutton.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    playbutton.style.display = "none";
+    gamecontainer.style.display = "block";
+
+    iniciarjuego();
+});
+
+function iniciarjuego() {
+    console.log("El juego ha comenzado.");
+}
