@@ -16,25 +16,9 @@ form.addEventListener("submit", function (event) {
 });
 
 playerInput.addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) { // 13 is the key code for "Enter" key
+    if (event.keyCode === 1) { // 13 is the key code for "Enter" key
         form.dispatchEvent(new Event('submit'));
     }
 });
 
-// Button play
-
-var playbutton = document.getElementById("playbutton");
-var gamecontainer = document.getElementById("gamecontainer");
-
-playbutton.addEventListener("click", function(event) {
-    event.preventDefault();
-
-    playbutton.style.display = "none";
-    gamecontainer.style.display = "block";
-
-    iniciarjuego();
-});
-
-function iniciarjuego() {
-    console.log("El juego ha comenzado.");
-}
+// Button inicio
