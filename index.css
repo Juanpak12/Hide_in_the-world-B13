@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 body{
-    background-image: url("https://i.ibb.co/cJzRL0y/inicio-1.gif");
+    /*background-image: url("https://i.ibb.co/cJzRL0y/inicio-1.gif");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center;*/
+    background: black;
     background-size: 100%;
     text-align: center;
     height: 81vh;
@@ -14,11 +15,52 @@ body{
  height: auto;
  margin: 4em;
 }
-button{
-    background: rgb(249,231,126);
-    background: radial-gradient(circle, rgba(249,231,126,0.0032387955182072714) 0%, rgba(251,18,18,0.6727065826330532) 100%);
-    padding: 1em 0.8em;
-    border-color: grey;
+.button{
+    position: relative;
+    padding: 10px 30px;
+    border:3px solid;
+    text-decoration: none;
+    color: brown;
+    transition: all 0.6s ease;
+}
+
+.button:hover{
+    background-color: none;
+    box-shadow:0 0 30px red;
+    border-color: var(--color);
+
+}
+
+.button span:nth-child(n){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+
+}
+.button span:nth-child(1){
+    right: 10%;
+    top: -10%;
+    background-color: brown;
+}
+.button span:nth-child(2){
+    left: 10%;
+    bottom: -10px;
+    background-color: white;
+}
+
+.button:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: var(--color);
+    background-color: white;
+
+}
+.button:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate(90deg);
+    background-color: brown;
 }
 a{
     color:wheat;;
