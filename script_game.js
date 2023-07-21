@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameIsOver = document.getElementById("gameIsOver");
     const departments = document.querySelectorAll("path");
     const deadCodersList = document.getElementById("deadCodersList");
+    const resetButton = document.getElementById("reset-game");
     let isGameOver = false;
 
     // Recuperar la lista de jugadores y departamentos del almacenamiento local
@@ -27,6 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+     // Evento de clic para reiniciar el juego y redirigir a home
+  resetButton.addEventListener("click", function () {
+    // Limpiar el almacenamiento local y redirigir a home
+    localStorage.clear();
+    window.location.href = "./home.html";
+  });
+  
     function showModal(departmentName) {
         modalContainer.style.display = "block";
 
