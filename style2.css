@@ -1,7 +1,7 @@
 body{
     padding: 5vw;
     margin: 0;
-    background: url("https://i.ibb.co/cw6HrgY/inicio-2.gif");
+    background: url("https://i.ibb.co/2qfMJps/list-3.gif");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -17,41 +17,72 @@ body{
 
 }
 
-#logo{
-    position: absolute;
-    left: 50px;
-    top: 40px;
-    width: 150px;
-    height: 150px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 370px) and (max-width: 700px) {
+    body{
+        background-size:cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    #colombia{
+        fill:#f0e68c ;
+        stroke: #8b4513;
+        stroke-width: 2px;    
+        background-size: cover;
+        width: 100vw;
+        height: 90vh;
+        justify-content: center;
+    }
+    #colombia :hover{        
+        fill: aqua;
+    }
+.desktop {
+    display: none;
+}
+.tablet {
+    display: none;
+}
+}
+
+/*@media (min-width: 820px) and (max-width: 990px) {
+    .desktop {
+        display: none;
+    }
+    .movil {
+        display: none;
+    }
+}
+
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
     }
 
-.botones_movimiento{
-    position: absolute;
-    top: 450px;
-  
-}
-
-.botones_movimiento button{
-    background-color: transparent;
-    margin-right: 20px;
-    border: none;
-    color: white;
-    width: 70px;
-    height: 70px;
-}
-
-/*.botones_movimiento button i{
-    position: absolute;
-    
-    cursor: pointer;
-}*/
-
-.fire{
-    position: absolute;
-    left: 1100px;
-    top: 500px;
-    cursor: pointer;
-}
-#COL99{
-    fill:aqua;
+    .movil {
+        display: none;
+    }
 }
