@@ -1,51 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hide_in_the-World-Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="content">
-      <div>
-        <img
-          class="logo"
-          src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png"
-          width="80px"
-          height="80px"
-          alt="logovertical-colombia"
-        />
-      </div>
 
-      <form id="start-form">
-        <div class="input_player">
-          <label for="player">Player (required):</label>
-          <input type="text" id="player" name="player" required />
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide_in_the_World-Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
+    </div>
 
-        <div id="players-section">
-          <div id="chosen-players">
+    <h1>Escondete en Colombia</h1>
+
+    <div id="players-section">
+        <form id="start-form">
+            <label for="player"></label>
+            <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required /><br /><br />
+
+            <label for="department">Select Department:</label>
+            <select id="department" name="department"></select><br><br>
+
+            <button type="submit" id="agregar">AGREGAR</button>
+
+            <a href="./game.html">INICIO</a>
+        </form>
+
+        <div id="chosen-players">
             <h3>Chosen Players:</h3>
             <ul id="chosen-player-names"></ul>
-          </div>
         </div>
-
-        <!-- <div class="warning">
-          <h1><strong>Warning!</strong></h1>
+        
+        <div id="chosen-players-departments">
+            <h3>Chosen Players with Departments:</h3>
+            <ul id="chosen-players-with-department"></ul>
         </div>
+    </div>
 
-        <div class="warning">
-          <h6>We are not responsible for any traumas caused by this game.</h6>
-        </div>
+    <div class="warning">
+        <h1><strong>Warning!</strong></h1>
+    </div>
 
-      <div class="warning">
+    <div class="warning">
+        <h6>We are not responsible for any traumas caused by this game.</h6>
+    </div>
+
+
+    <div class="warning">
         <h6>Please do not play if you are under 18 years old.</h6>
-      </div>
+    </div>
 
-      <button type="submit">PLAY</button>
-    </form>
-
+    <audio src="https://on.soundcloud.com/Kny5b"></audio>
     <script src="script.js"></script>
-  </body>
+    <script src="load_departments.js"></script> <!-- Nuevo script para cargar departamentos -->
+</body>
 </html>

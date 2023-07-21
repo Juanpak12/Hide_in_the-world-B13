@@ -1,48 +1,21 @@
 body{
-    padding: 0%;
-    margin: 0%;
-    background: url("https://i.ibb.co/gTyQy8p/gif-de-la-muete.gif");
+    padding: 5vw;
+    margin: 0;
+    background: url("https://i.ibb.co/cw6HrgY/inicio-2.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    height: 81vh;
 }
 
-.mundo{
-    position: absolute;
-    left: 350px;
-    top: 50px;
+#colombia{
+    width: 30vw;
+
+    fill: #02c252;
+    stroke: #023f21;
+    stroke-width: 2px;
 
 }
-
-#logo{
-    position: absolute;
-    left: 50px;
-    top: 40px;
-}
-
-.botones_movimiento{
-    position: absolute;
-    top: 450px;
-  
-}
-
-.botones_movimiento button{
-    background-color: transparent;
-    margin-right: 20px;
-    border: none;
-    color: white;
-    width: 70px;
-    height: 70px;
-}
-
-.botones_movimiento button i{
-    position: absolute;
-    
-    cursor: pointer;
-}
-
-.fire{
-    position: absolute;
-    left: 1100px;
-    top: 500px;
-    cursor: pointer;
+#COL99{
+    fill:aqua;
 }
