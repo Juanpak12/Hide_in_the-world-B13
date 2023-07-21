@@ -25,13 +25,12 @@ h1{
     background-color: white;
     padding: 10px 10px;
     display: block;
-    border: none;
+    border: 10px solid black;
     font-family:'Rubik Glitch';
     font-size: 40px;
     text-align: center;
-    
-    
 }
+
 ::placeholder{
     color: red;
 }
