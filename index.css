@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+body{
+    background-image: url("https://i.ibb.co/cJzRL0y/inicio-1.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    text-align: center;
+    height: 81vh;
+    padding: 2vw;
+ 
+}
+#logo{
+ width: 20vw;
+ height: auto;
+ margin: 4em;
+}
+button{
+    background: rgb(249,231,126);
+    background: radial-gradient(circle, rgba(249,231,126,0.0032387955182072714) 0%, rgba(251,18,18,0.6727065826330532) 100%);
+    padding: 1em 0.8em;
+    border-color: grey;
+}
+a{
+    color:wheat;;
+    font-size: 4em;
+    text-decoration: none;
+}
