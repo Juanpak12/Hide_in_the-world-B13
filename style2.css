@@ -1,15 +1,19 @@
 body{
-    padding: 0%;
-    margin: 0%;
-    background: url("https://i.ibb.co/gTyQy8p/gif-de-la-muete.gif");
+    padding: 5vw;
+    margin: 0;
+    background: url("https://i.ibb.co/cw6HrgY/inicio-2.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    height: 81vh;
 }
 
-.mundo{
-    position: absolute;
-    left: 350px;
-    top: 50px;
+#colombia{
+    width: 30vw;
+
+    fill: #02c252;
+    stroke: #023f21;
+    stroke-width: 2px;
 
 }
 
@@ -47,4 +51,7 @@ body{
     left: 1100px;
     top: 500px;
     cursor: pointer;
+}
+#COL99{
+    fill:aqua;
 }
