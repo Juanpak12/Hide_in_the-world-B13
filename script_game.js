@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
         isGameOver = false;
         gameIsOver.style.display = "none";
         gameOverButton.style.display = "none";
-        deadCodersList.innerHTML = "";
+        deadCodersList.innerHTML = ""; // Vaciar la lista de coders muertos
         playerList = [];
         departmentList = [];
-        updateLocalStorage();
+        loadLocalStorage(); // Cargar los datos actualizados del almacenamiento local
     }
 
     function updateLocalStorage() {
@@ -103,5 +103,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     initGame();
-    loadLocalStorage();
 });
