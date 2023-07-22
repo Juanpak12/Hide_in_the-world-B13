@@ -26,6 +26,7 @@ h1 {
 }
 
 #player {
+
     background-color: white;
     padding: 10px 10px;
     display: block;
@@ -34,6 +35,18 @@ h1 {
     font-size: 40px;
     text-align: center;
 
+}
+
+
+
+#Player {
+    background-color: white;
+    padding: 10px 10px;
+    display: block;
+    border: none;
+    font-family: 'Rubik Glitch';
+    font-size: 40px;
+    text-align: center;
 
 }
 
@@ -297,37 +310,65 @@ ul li {
 
 
 
+
+
 /* Responsive para movil*/
 @media (min-width: 370px) and (max-width: 700px) {
+ 
+    .container {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+ }
 
-    #Home {
-        width: 25vw;
-        height: 18vh;
-        margin: 100px auto;
-        text-align: center;
-        padding: 40px;
-        border-radius: 20px;
-    }
 
     #logo {
-        justify-content: center;
-        width: 40vw;
-        height: 40vh;
+        width: 35vw;
+        height: 31vh;
     }
 
     #Titulo {
+        height: 12px;
         justify-content: center;
+        text-align: center;
     }
 
-    #start-form {
+label {
+    text-align: right;
+    height: 4px;
+    width: 4px;
+
+}
+
+    #player {
         justify-content: center;
-        width: auto;
-        height: auto;
-        
+        align-items: center;
+        padding: 8px 8px;
+        font-size: 30px;
+        text-align: center;
+
     }
+
+    #Player {
+        background-color: white;
+        padding: 8px 8px;
+        font-family: 'Rubik Glitch';
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+#department {
+    justify-content: center;
+    align-items: center;    
+}
+
 
     #chosen-player-names {
         justify-content: center;
+        align-items: center;
+        text-align: center;
         height: auto;
         width: auto;
     }
