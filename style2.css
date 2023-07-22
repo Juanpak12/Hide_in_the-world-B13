@@ -19,3 +19,13 @@ body{
 #COL99{
     fill:aqua;
 }
+
+
+
+
+/* css de la explosion al dar click*/
+
+#explosion-container {
+    display: none;
+    position: absolute;
+  }
