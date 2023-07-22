@@ -8,12 +8,7 @@ git p<!DOCTYPE html>
   </head>
   <body>
     <div>
-      <img
-        src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png"
-        width="80px"
-        height="80px"
-        alt="logovertical-colombia"
-      />
+        <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
     </div>
 
     <h1>Hide in the World Play</h1>
@@ -22,7 +17,19 @@ git p<!DOCTYPE html>
       <label for="player">Player (required):</label>
       <input type="text" id="player" name="player" required /><br /><br />
 
-      <div id="players-section">
+    <div id="players-section">
+        <form id="start-form">
+            <label for="player"></label>
+            <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required /><br /><br />
+
+            <label for="department">Select Department:</label>
+            <select id="department" name="department"></select><br><br>
+
+            <button type="submit" id="agregar">AGREGAR</button>
+
+            <a href="./game.html">INICIO</a>
+        </form>
+
         <div id="chosen-players">
           <h3>Chosen Players:</h3>
           <ul id="chosen-player-names"></ul>
