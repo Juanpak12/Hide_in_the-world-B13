@@ -39,7 +39,12 @@ h1{
 #chosen-players{
     color: white;
 }
-
+#chosen-players-names{
+    color: white;
+}
+.warning{
+    color: white;
+}
 
 
 
