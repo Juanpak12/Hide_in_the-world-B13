@@ -7,6 +7,7 @@
     <title>Hide_in_the_World-Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div>
         <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
@@ -17,25 +18,25 @@
     <div id="players-section">
         <form id="start-form">
             <label for="player"></label>
-            <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required /><br /><br />
+            <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required />
+            <div id="Home">
+                <label for="department">Select Department:</label><br><br>
+                <select id="department" name="department"></select><br><br>
 
-            <label for="department">Select Department:</label>
-            <select id="department" name="department"></select><br><br>
+                <button type="submit">AGREGAR</button>
 
-            <button type="submit" >AGREGAR</button>
+                <a href="./game.html">INICIO</a>
 
-            <a href="./game.html">INICIO</a>
-        </form>
+                <div id="chosen-players">
+                    <h3>Chosen Players:</h3>
+                    <ul id="chosen-player-names"></ul>
+                </div>
 
-        <div id="chosen-players">
-            <h3>Chosen Players:</h3>
-            <ul id="chosen-player-names"></ul>
-        </div>
-        
-        <div id="chosen-players-departments">
-            <h3>Chosen Players with Departments:</h3>
-            <ul id="chosen-players-with-department"></ul>
-        </div>
+                <div id="chosen-players-departments">
+                    <h3>Chosen Players with Departments:</h3>
+                    <ul id="chosen-players-with-department"></ul>
+                </div>
+            </div>
     </div>
 
     <div class="warning">
@@ -55,4 +56,5 @@
     <script src="script.js"></script>
     <script src="load_departments.js"></script> <!-- Nuevo script para cargar departamentos -->
 </body>
+
 </html>
