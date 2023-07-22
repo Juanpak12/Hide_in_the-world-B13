@@ -1,58 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hide_in_the_World-Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!--Arreglo a body para funcionalidad de audio-->
+  <body onclick="audio.play()">
     <div>
-        <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
+      <img
+        id="logo"
+        src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png"
+        width="100px"
+        height="100px"
+        alt="logo"
+      />
     </div>
 
     <h1>Escondete en Colombia</h1>
 
     <div id="players-section">
-        <form id="start-form">
-            <label for="player"></label>
-            <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required /><br /><br />
+      <form id="start-form">
+        <label for="player"></label>
+        <input
+          type="text"
+          id="player"
+          placeholder="Escribe tu nombre"
+          name="player"
+          required
+        /><br /><br />
 
-            <label for="department">Select Department:</label>
-            <select id="department" name="department"></select><br><br>
+        <label for="department">Select Department:</label>
+        <select id="department" name="department"></select
+        ><br /><br />
 
-            <button type="submit" id="agregar">AGREGAR</button>
+        <button type="submit" id="agregar">AGREGAR</button>
 
-            <a href="./game.html">INICIO</a>
-        </form>
+        <a id="play" class="play"
+          >INICIO
+          <span></span>
+          <span></span>
+        </a>
+      </form>
 
-        <div id="chosen-players">
-            <h3>Chosen Players:</h3>
-            <ul id="chosen-player-names"></ul>
-        </div>
-        
-        <div id="chosen-players-departments">
-            <h3>Chosen Players with Departments:</h3>
-            <ul id="chosen-players-with-department"></ul>
-        </div>
+      <div id="chosen-players">
+        <h3>Chosen Players:</h3>
+        <ul id="chosen-player-names"></ul>
+      </div>
+
+      <div id="chosen-players-departments">
+        <h3>Chosen Players with Departments:</h3>
+        <ul id="chosen-players-with-department"></ul>
+      </div>
     </div>
 
     <div class="warning">
-        <h1><strong>Warning!</strong></h1>
+      <h1><strong>Warning!</strong></h1>
     </div>
 
     <div class="warning">
-        <h6>We are not responsible for any traumas caused by this game.</h6>
+      <h6>We are not responsible for any traumas caused by this game.</h6>
     </div>
-
 
     <div class="warning">
-        <h6>Please do not play if you are under 18 years old.</h6>
+      <h6>Please do not play if you are under 18 years old.</h6>
     </div>
 
-    <audio src="https://on.soundcloud.com/Kny5b"></audio>
+    <!--Musica de fondo en pagina home-->
+    <audio id="musica" loop autoplay>
+      <source src="queen.mp3" type="audio/mpeg" />
+      Tu navegador no soporta audio MP3.
+    </audio>
+
+    <!-- Nuevo script para cargar departamentos -->
     <script src="script.js"></script>
-    <script src="load_departments.js"></script> <!-- Nuevo script para cargar departamentos -->
-</body>
+    <script src="load_departments.js"></script>
+
+    <!--Nuevos script para sonidos-->
+    <script src="play.js"></script>
+    <script src="audio.js"></script>
+  </body>
 </html>
