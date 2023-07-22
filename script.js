@@ -33,8 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
         event.preventDefault();
 
-    const playerName = playerInput.value.trim();
-    const selectedDepartment = departmentSelect.value;
+        const playerName = playerInput.value.trim();
+        const selectedDepartment = departmentSelect.value;
 
         if (playerName !== "" && selectedDepartment !== "") {
             const coderInfo = `${playerName}, ${selectedDepartment}`;
