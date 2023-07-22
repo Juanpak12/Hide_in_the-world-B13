@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-body{
+
+body {
     margin: 0;
     padding: 0;
     background-image: url("https://i.ibb.co/cw6HrgY/inicio-2.gif");
@@ -11,28 +12,32 @@ body{
     align-items: center;
     flex-direction: column;
 }
-img{
+
+img {
     height: 350px;
     width: 350px;
     margin: 20px;
 }
-h1{
+
+h1 {
     color: white;
     font-size: 35px;
 
 }
-#player{
+
+#player {
     background-color: white;
     padding: 10px 10px;
     display: block;
     border: none;
-    font-family:'Rubik Glitch';
+    font-family: 'Rubik Glitch';
     font-size: 40px;
     text-align: center;
-    
-    
+
+
 }
-::placeholder{
+
+::placeholder {
     color: red;
 }
 
@@ -67,110 +72,339 @@ h1{
 
 
 
+#Home {
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Estilos para el elemento select */
+#department {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #666;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #222;
+    color: #fff;
+    appearance: none;
+    /* Para evitar el estilo predeterminado del sistema */
+}
+
+/* Estilo para el scrollball en Chrome y Safari */
+#department::-webkit-scrollbar {
+    width: 10px;
+}
+
+#department::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+}
+
+/* Estilo para el scrollball en Firefox */
+#department {
+    scrollbar-width: thin;
+}
+
+#department::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+}
+
+/* Estilo para el scrollball en Edge e Internet Explorer */
+#department {
+    scrollbar-face-color: #222;
+    scrollbar-track-color: #000;
+}
+
+#department::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff3838;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #e63434;
+    transform: scale(1.05);
+}
+
+a {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 20px;
+    border: 2px solid #ff3838;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #ff3838;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #ff3838;
+    color: #fff;
+}
+
+#chosen-players {
+    color: #fff;
+}
+
+#chosen-players-departments {
+    margin-top: 40px;
+    color: #fff;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive para movil*/
 @media (min-width: 370px) and (max-width: 700px) {
-    .h1{
+
+    #Home {
+        width: 25vw;
+        height: 18vh;
+        margin: 100px auto;
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    #logo {
+        justify-content: center;
+        width: 40vw;
+        height: 40vh;
+    }
+
+    #Titulo {
         justify-content: center;
     }
 
-    .warning h1 h6  {
+    #start-form {
         justify-content: center;
-        align-items: center;
+        width: auto;
+        height: auto;
+        
+    }
+
+    #chosen-player-names {
+        justify-content: center;
         height: auto;
         width: auto;
     }
 
-.img {
-    background-size:cover;
-    width: 40vw;
-    height: 40vh;
-}
 
-#player {
-    text-align: center;
-
-}   
-}
-
-
-@media screen and (min-width: 1200px) {
-    
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .img {
-        justify-content: left;
-        
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 370px) and (max-width: 700px) {
-    .h1{
+    #Riesgo {
+        background-color: floralwhite;
         justify-content: center;
-    }
-
-    .warning h1 h6  {
-        justify-content: center;
-        align-items: center;
-        height: auto;
+        text-align: center;
         width: auto;
+        height: auto;
     }
 
-.img {
-    background-size:cover;
-    width: 40vw;
-    height: 40vh;
+    #Game {
+        background-color: floralwhite;
+        justify-content: center;
+        text-align: center;
+        width: auto;
+        height: auto;
+    }
+
+    #player {
+        text-align: center;
+
+    }
 }
 
-#player {
-    text-align: center;
 
-}   
-}
-
-
-@media screen and (min-width: 1200px) {
-    
-}
+@media screen and (min-width: 1200px) {}
 
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-    .img {
-        justify-content: left;
-        
+    #Home {
+        width: 80%;
+        max-width: 600px;
+        margin: 100px auto;
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;
     }
+
+    #logo {
+        justify-content: center;
+        height: 48vh;
+        width: 32vw;
+    }
+
+    #Titulo {
+        justify-content: center;
+    }
+
+    #start-form {
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+
+    #Riesgo {
+        background-color: floralwhite;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+
+    #Game {
+        background-color: floralwhite;
+        justify-content: center;
+        width: auto;
+        height: auto;
+    }
+
+    button[type="submit"] {
+        justify-content: center;
+        height: 9vh;
+        background-position: 0svb;
+
+    }
+
+
 }
