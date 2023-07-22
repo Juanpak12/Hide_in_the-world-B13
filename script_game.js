@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
     function showModal(departmentName) {
-        modalContainer.style.display = "block";
+        modalContainer.classList.add("show");
 
         const coderIndex = departmentList.findIndex((department) => department === departmentName);
         if (coderIndex !== -1) {
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function hideModal() {
-        modalContainer.style.display = "none";
+        modalContainer.classList.remove("show");
     }
 
     function showGameOver() {
