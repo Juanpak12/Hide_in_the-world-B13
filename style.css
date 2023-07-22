@@ -42,9 +42,29 @@ h1{
     text-decoration: none;
     color: black;
     background: white;
+    transition: all 0.6s ease;
 }
 
+.inicio:hover{
+    background-color: brown;
+    box-shadow: 0 0 30px red;
+    border-color: black;
+}
 
+.inicio span:nth-child(n){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+
+}
+
+.inicio span:nth-child(1){
+    right: 10%;
+    top: -10%;
+    background-color: brown;
+}
 
 
 
