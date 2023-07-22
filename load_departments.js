@@ -26,4 +26,3 @@ fetch("game.html")
   .catch((error) => {
     console.error("Error fetching and loading departments:", error);
   });
-  
