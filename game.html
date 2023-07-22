@@ -106,12 +106,19 @@
       </div>
   </div>
 
-  <div id="gameIsOver">
+  <button id="reset-game">Reiniciar Juego</button>
+
+  
+
+  <div class="popup" id="gameIsOver">
+    
     <h1>Game Over!</h1>
     <p>Coders muertos: <span id="deadCodersCount">0</span></p>
     <p>Presiona "Game Over" para reiniciar el juego.</p>
+    <button href="./home.html" id="reset-game">Reiniciar Juego</button>
 </div>
-<button href="./home.html" id="reset-game">Reiniciar Juego</button>
+
+
 
   <script src="script.js"></script>
   <script src="load_departments.js"></script>
@@ -121,5 +128,5 @@
       localStorage.setItem("playerList", playerList.innerHTML);
   </script>
   <script src="script_game.js"></script>
-  </body>
+</body>
 </html>
