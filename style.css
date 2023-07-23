@@ -54,6 +54,17 @@ h1 {
     color: red;
 }
 
+#chosen-players{
+    color: white;
+}
+#chosen-players-names{
+    color: white;
+}
+.warning{
+    color: white;
+}
+
+
 
 
 

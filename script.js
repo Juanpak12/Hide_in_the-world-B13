@@ -56,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
         form.dispatchEvent(new Event("submit"));
     });
 
+playerInput.addEventListener("keyup", function (event) {
+    if (event.keyCode === 1) { // 13 is the key code for "Enter" key
+        form.dispatchEvent(new Event('submit'));
+    }
+});
+
+
     // Evento de clic para iniciar el juego después de agregar jugadores y departamentos
     startGameButton.addEventListener("click", () => {
         if (playerList.length > 0 && departmentList.length > 0) {
