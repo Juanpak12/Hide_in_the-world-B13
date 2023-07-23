@@ -28,7 +28,7 @@ h1 {
 #player {
 
     background-color: white;
-    padding: 10px 10px;
+    padding: 4px 4px;
     display: block;
     border: none;
     font-family: 'Rubik Glitch';
@@ -41,7 +41,7 @@ h1 {
 
 #Player {
     background-color: white;
-    padding: 10px 10px;
+    padding: 7px 7px;
     display: block;
     border: none;
     font-family: 'Rubik Glitch';
@@ -230,109 +230,8 @@ ul li {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsive para movil*/
 @media (min-width: 370px) and (max-width: 700px) {
- 
-    .container {
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: auto;
- }
-
 
     #logo {
         width: 35vw;
@@ -352,7 +251,15 @@ label {
 
 }
 
-    #player {
+
+#start-form {
+justify-content: center;
+align-items: center;
+
+
+}
+    
+#player {
         justify-content: center;
         align-items: center;
         padding: 8px 8px;
@@ -362,7 +269,6 @@ label {
     }
 
     #Player {
-        background-color: white;
         padding: 8px 8px;
         font-family: 'Rubik Glitch';
         font-size: 30px;
@@ -370,51 +276,20 @@ label {
 
     }
 
-#department {
-    justify-content: center;
-    align-items: center;    
+
 }
 
 
-    #chosen-player-names {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        height: auto;
-        width: auto;
-    }
+@media screen and (min-width: 1200px) {
 
-
-    #Riesgo {
-        background-color: floralwhite;
-        justify-content: center;
-        text-align: center;
-        width: auto;
-        height: auto;
-    }
-
-    #Game {
-        background-color: floralwhite;
-        justify-content: center;
-        text-align: center;
-        width: auto;
-        height: auto;
-    }
-
-    #player {
-        text-align: center;
-
-    }
 }
 
 
-@media screen and (min-width: 1200px) {}
-
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 750px) and (max-width: 1020px) {
+   
     #Home {
         width: 80%;
-        max-width: 600px;
+        max-width: 750px;
         margin: 100px auto;
         text-align: center;
         padding: 40px;
@@ -431,21 +306,14 @@ label {
         justify-content: center;
     }
 
-    #start-form {
-        justify-content: center;
-        width: auto;
-        height: auto;
-    }
 
     #Riesgo {
-        background-color: floralwhite;
         justify-content: center;
         width: auto;
         height: auto;
     }
 
     #Game {
-        background-color: floralwhite;
         justify-content: center;
         width: auto;
         height: auto;

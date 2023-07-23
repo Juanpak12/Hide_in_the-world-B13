@@ -1,7 +1,7 @@
 body{
     padding: 5vw;
     margin: 0;
-    background: url("https://i.ibb.co/2qfMJps/list-3.gif");
+    background: url("https://i.ibb.co/GWH2dw8/list-1.gif");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -10,20 +10,10 @@ body{
 
 #colombia{
     width: 30vw;
-
     fill: #02c252;
     stroke: #023f21;
     stroke-width: 2px;
 
-}
-
-#reset-game{
-    color: white;
-    background-color: black;
-}
-
-.modal-container{
-    color: white;
 }
 
 
@@ -52,6 +42,18 @@ body{
 
 
 @media (min-width: 370px) and (max-width: 700px) {
+
+    body{
+        padding: 5vw;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        height: 81vh;
+    }
+    
+
+
     body {
         font-size: 16px;
       }
@@ -95,26 +97,6 @@ body{
     }
 }
 
-@media (min-width: 991px) {
-    .tablet {
-        display: none;
-    }
-
-    .movil {
-        display: none;
-    }
-}
-
-
-
-
-/* css de la explosion al dar click*/
-
-#explosion-container {
-    display: none;
-    position: absolute;
-  }
-
 
 
 
@@ -133,3 +115,14 @@ body{
         display: none;
     }
 }
+
+
+
+
+
+/* css de la explosion al dar click*/
+
+#explosion-container {
+    display: none;
+    position: absolute;
+  }

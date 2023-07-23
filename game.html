@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hide_in_the-World-Play</title>
-  <link rel="stylesheet" href="style2.css" />
+      <link rel="stylesheet" href="style2.css" />
 </head>
 
 <body>
@@ -162,33 +162,43 @@
     <img id="explosion-gif" src="./img/picmix.com_1944817.gif" alt="Explosion">
   </div>
 
-  <!-- Modal para el pop-up -->
-  <div id="modal_container" class="modal-container">
-    <div class="container_imagen">
-      <img src="../assets/img/skeleton.png" id="imagen">
-    </div>
-    <div class="modal">
-      <h3 id="alertPlayerDeleted"></h3>
-      <h4>Coders muertos:</h4>
-      <ul id="deadCodersList"></ul>
-      <div class="container_bottons" id="container_buttons">
-        <div id="nextKill">
-          <img src="../assets/svg/Continue.svg" alt="continue button" class="btcontinue">
-        </div>
-        <button id="gameOverButton">Game Over</button>
+        <!-- Modal para el pop-up -->
+    <div id="modal_container" class="modal-container">
+      <div class="container_imagen">
+          <img src="../assets/img/skeleton.png" id="imagen">
       </div>
-    </div>
+      <div class="modal">
+          <h3 id="alertPlayerDeleted"></h3>
+          <h4>Coders muertos:</h4>
+          <ul id="deadCodersList"></ul>
+          <div class="container_bottons" id="container_buttons">
+              <div id="nextKill">
+                  <img src="../assets/svg/Continue.svg" alt="continue button" class="btcontinue">
+              </div>
+              <button id="gameOverButton">Game Over</button>
+          </div>
+      </div>
   </div>
 
+  <button id="reset-game">Reiniciar Juego</button>
+
+  
+
   <div id="gameIsOver">
+    <div class="popup">
     <h1>Game Over!</h1>
     <p>Coders muertos: <span id="deadCodersCount">0</span></p>
     <p>Presiona "Game Over" para reiniciar el juego.</p>
-  </div>
-  <button href="./home.html" id="reset-game">Reiniciar Juego</button>
+</div>
+<button href="./home.html" id="reset-game">Reiniciar Juego</button>
 
   <script src="script.js"></script>
   <script src="load_departments.js"></script>
-</body>
-
+  <script>
+      // Guardar la lista de jugadores en el almacenamiento local
+      const playerList = document.getElementById("chosen-player-names");
+      localStorage.setItem("playerList", playerList.innerHTML);
+  </script>
+  <script src="script_game.js"></script>
+  </body>
 </html>
