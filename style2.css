@@ -95,3 +95,32 @@ body{
         display: none;
     }
 }
+
+
+
+
+/* css de la explosion al dar click*/
+
+#explosion-container {
+    display: none;
+    position: absolute;
+  }
+
+
+
+
+/* css de la explosion al dar click*/
+
+#explosion-container {
+    display: none;
+    position: absolute;
+  }
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
+    }
+
+    .movil {
+        display: none;
+    }
+}

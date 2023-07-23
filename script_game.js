@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const departments = document.querySelectorAll("path");
     const deadCodersList = document.getElementById("deadCodersList");
     const resetButton = document.getElementById("reset-game");
+    // Obtener el contenedor de la explosión y el elemento del GIF de explosión
+    const explosionContainer = document.getElementById("explosion-container");
+    const explosionGif = document.getElementById("explosion-gif");
+
     let isGameOver = false;
 
     // Recuperar la lista de jugadores y departamentos del almacenamiento local
@@ -26,7 +30,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 showModal(target.getAttribute("data-department"));
             }
         }
+
+
+        // Mostrar la explosión justo sobre el departamento clickeado
+      const explosionSize = 100; // Tamaño de la explosión (ajusta según tus necesidades)
+      const x = event.clientX - explosionSize / 2;
+      const y = event.clientY - explosionSize / 2;
+      showExplosion(x, y);
+
+
     });
+
+
+    // Función para mostrar la explosión en las coordenadas especificadas
+  function showExplosion(x, y) {
+    const explosionContainer = document.getElementById("explosion-container");
+    explosionContainer.style.display = "block";
+    explosionContainer.style.left = x + "px";
+    explosionContainer.style.top = y + "px";
+    
+        // Ocultar la explosión después de 1 segundo (1000 milisegundos)
+        setTimeout(hideExplosion, 1000);
+      }
+    
+      function hideExplosion() {
+        explosionContainer.style.display = "none";
+      }
+
+
 
      // Evento de clic para reiniciar el juego y redirigir a home
   resetButton.addEventListener("click", function () {
@@ -36,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   
     function showModal(departmentName) {
-        modalContainer.style.display = "block";
+        modalContainer.classList.add("show");
 
         const coderIndex = departmentList.findIndex((department) => department === departmentName);
         if (coderIndex !== -1) {
@@ -60,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function hideModal() {
-        modalContainer.style.display = "none";
+        modalContainer.classList.remove("show");
     }
 
     function showGameOver() {
