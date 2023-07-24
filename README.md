@@ -64,6 +64,10 @@ podrás escoger un departamento y lanzar una bomba, el nombre que esta oculta en
 
 - La aplicacion contiene distintos tipos de animaciones tanto visuales como de audio e interpreta todos los requerimentos pedidos para su debido despliegue. Se busca dar un distinto tipo de enfoque frente al mecanismo del juego escogiendo de tematica el mapa de colombia con sus departamentos. 
 
+## Acceso al proyecto
+
+- En el repositorio dirigirse al boton code de color verde que esta ubicado en la parte superior derecha y dar clic. En el despliegue de opciones dar clic en download ZIP. 
+![Alt text](image.png)
 
 ## DESPLIEGUE de la aplicación: 
 [Link del despliegue](https://deploy-preview-16--wheel-of-doom-colombia.netlify.app/).
