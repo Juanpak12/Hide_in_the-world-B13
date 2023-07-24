@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     function updateInicioButtonState() {
         if (playerList.length >= 2) {
             // Habilitar el botón de inicio si se tienen al menos 2 jugadores
-            document.getElementById("inicio").disabled = false;
+            document.getElementById("inicio").style.display = "";
         } else {
             // Deshabilitar el botón de inicio si no se tienen al menos 2 jugadores
-            document.getElementById("inicio").disabled = true;
+            document.getElementById("inicio").style.display = "none";
         }
     } 
 
@@ -30,21 +30,26 @@ document.addEventListener("DOMContentLoaded", function () {
         // Mostrar solo el nombre del jugador en la lista, sin el departamento
         const playerItem = document.createElement("li");
         playerItem.textContent = playerName;
+        // Agregar la clase "player-list-item" al elemento li
+        playerItem.classList.add("player-list-item");
         chosenPlayerNamesList.appendChild(playerItem);
-  
+        updateInicioButtonState();
         playerInput.value = ""; // Limpiar el campo de entrada para el siguiente nombre
-        console.log(playerList);
         if (playerList.length === 33) {
           // Desactivar el botón de agregar cuando se alcance el máximo de 33 jugadores
           document.getElementById("agregar").disabled = true;
           document.getElementById("agregar").style.display ="none";
-          updateInicioButtonState();
         }
         // Función para agregar un jugador con su departamento al array
       } else {
         alert("Por favor, ingresa un nombre y asegúrate de que no se exceda el máximo de 33 jugadores.");
       }
       updateInicioButtonState();
+              // Aplicar la barra de desplazamiento después de agregar 4 jugadores
+          if (playerList.length % 4 === 0 && playerList.length > 0) {
+            chosenPlayerNamesList.style.maxHeight = "200px"; // Puedes ajustar el valor de altura
+            chosenPlayerNamesList.style.overflowY = "auto";
+        }
     });
     
     // Obtener el contenido del archivo "game.html" utilizando Fetch API
