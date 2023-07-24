@@ -234,8 +234,8 @@ ul li {
 @media (min-width: 370px) and (max-width: 700px) {
 
     #logo {
-        width: 35vw;
-        height: 31vh;
+        width: 40vw;
+        height: 39vh;
     }
 
     #Titulo {
@@ -251,45 +251,61 @@ label {
 
 }
 
-
-#start-form {
-justify-content: center;
-align-items: center;
-
-
-}
-    
 #player {
-        justify-content: center;
-        align-items: center;
+        
         padding: 8px 8px;
-        font-size: 30px;
-        text-align: center;
+        font-size: 24px;
 
     }
 
     #Player {
         padding: 8px 8px;
-        font-family: 'Rubik Glitch';
-        font-size: 30px;
-        text-align: center;
+        font-size: 24px;
 
     }
 
-#start-form {
+
+}
+
+
+/*Responsive para desktop*/
+@media (min-width: 1024px) and (max-width: 1700px) {
+
     
+    #logo {
+        width: 42vw;
+        height: 52vh;
+    }
+
+    #Titulo {
+        justify-content: center;
+        text-align: center;
+        height: 80px;
+    }
+
+label {
+    text-align: right;
+    height: 40px;
+    width: 40px;
+
+}
+
+#player {
+        
+        padding: 8px 8px;
+        font-size: 24px;
+
+    }
+
+    #Player {
+        padding: 8px 8px;
+        font-size: 24px;
+
+    }
 }
 
 
-}
-
-
-@media screen and (min-width: 1200px) {
-
-}
-
-
-@media screen and (min-width: 750px) and (max-width: 1020px) {
+@media (min-width: 750px) and (max-width: 1020px) {
    
     #Home {
         width: 80%;

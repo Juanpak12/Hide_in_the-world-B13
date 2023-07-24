@@ -94,7 +94,6 @@ a{
   @media (min-width: 370px) and (max-width: 760px) {
 
     body{
-        
         background-position: top;
         background-size: 222%;
     }
@@ -110,6 +109,7 @@ a{
       padding: 10px 17px;
     }
   }
+
 
   /*Estilos para tab*/
   @media (min-width: 768px) and (max-width: 1023px) {
