@@ -67,7 +67,8 @@ podrás escoger un departamento y lanzar una bomba, el nombre que esta oculta en
 ## Acceso al proyecto
 
 - En el repositorio dirigirse al boton code de color verde que esta ubicado en la parte superior derecha y dar clic. En el despliegue de opciones dar clic en download ZIP. 
-![Alt text](image.png)
+![image](https://github.com/Juanpak12/Hide_in_the-world-B13/assets/133064600/e4ec721d-200a-4d54-aca6-39617ab0cadd)
+
 
 ## DESPLIEGUE de la aplicación: 
 [Link del despliegue](https://deploy-preview-16--wheel-of-doom-colombia.netlify.app/).
