@@ -16,32 +16,21 @@ body{
     stroke-width: 2px;
 
 }
+/* css de la explosion al dar click*/
 
+#explosion-container {
+    display: none;
+    position: absolute;
+  }
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .movil {
+        display: none;
+    }
+}
 @media (min-width: 370px) and (max-width: 700px) {
 
     
@@ -82,15 +71,6 @@ body{
     }
 }
 
-
-
-
-/* css de la explosion al dar click*/
-
-#explosion-container {
-    display: none;
-    position: absolute;
-  }
 @media (min-width: 991px) {
     .tablet {
         display: none;
@@ -100,14 +80,3 @@ body{
         display: none;
     }
 }
-
-
-
-
-
-/* css de la explosion al dar click*/
-
-#explosion-container {
-    display: none;
-    position: absolute;
-  }

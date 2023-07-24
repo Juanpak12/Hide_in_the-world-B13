@@ -7,21 +7,23 @@ body{
     text-align: center;
     height: 81vh;
     padding: 2vw;
- 
+    
 }
 
 #logo{
+ left: 23px;
  width: 20vw;
  height: auto;
  margin: 4em;
 }
+
 .button{
     position: relative;
     padding: 10px 30px;
     border:3px solid;
     text-decoration: none;
     color: black;
-    background: white;
+    background-color: white;
     transition: all 0.6s ease;
     
 }
@@ -31,7 +33,6 @@ body{
     box-shadow:0 0 30px red;
     border-color: black;
     
-
 }
 
 .button span:nth-child(n){
@@ -74,12 +75,6 @@ a{
 
 
 
-     
-
-
-
-
-
 
 
 
@@ -91,28 +86,29 @@ a{
 /* Estilos base para todos los tamaños de pantalla */
 
   /* Estilos para dispositivos móviles y tablets */
-  @media (min-width: 370px) and (max-width: 760px) {
+  @media screen and (max-width: 600px) {
 
     body{
         background-position: top;
-        background-size: 222%;
+        background-size: 398vw;
+       
     }
     
-
     #logo {
-      width: 40vw;
-      height: 40vh;
+    
+      width: 42vw;
+      height: 45vh;
     }
 
     #start {
       font-size: 19px;
-      padding: 10px 17px;
+      padding: 17px 17px;
     }
   }
 
 
   /*Estilos para tab*/
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 690px) and (max-width: 1023px) {
 
     
     body{
@@ -123,8 +119,9 @@ a{
 
 
     #logo {  
-      width: 39vw;
+      width: 31vw;
       height: 55vh;
+      align-items: center;
     }
 
 
@@ -150,7 +147,7 @@ a{
 
 
   /* Estilos para escritorios */
-  @media (min-width: 770px) {
+  @media (min-width: 780px) {
 
     body{
         background-position:top;

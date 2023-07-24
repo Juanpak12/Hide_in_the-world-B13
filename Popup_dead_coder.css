@@ -41,7 +41,10 @@ body {
 .show {
   pointer-events: auto;
   opacity: 1;
+<<<<<<< HEAD
   
+=======
+>>>>>>> f0c23b367201a9d4332ee2b6ff4b63a42121bb5a
 }
 
 .modal {
