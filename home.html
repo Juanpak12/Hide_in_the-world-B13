@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,34 +7,29 @@
     <title>Hide_in_the_World-Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
+ <!--Arreglo a body para funcionalidad de audio-->
 <body>
     <div>
         <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
     </div>
 
-    <h1>Escondete en Colombia</h1>
+    <h1>Escondete en Colombia</h1> 
 
     <div id="players-section">
         <form id="start-form">
             <label for="player"></label>
             <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required /><br /><br />
+            <button type="submit" id="agregar" >AGREGAR</button>
 
-            <label for="department">Select Department:</label>
-            <select id="department" name="department"></select><br><br>
-
-            <button type="submit" >AGREGAR</button>
-
-            <a href="./game.html">INICIO</a>
+            <a id="inicio" class="inicio" disabled>INICIO
+                <span></span>
+                <span></span>
+            </a>
         </form>
 
         <div id="chosen-players">
-            <h3>Chosen Players:</h3>
+            <h3>Players list:</h3>
             <ul id="chosen-player-names"></ul>
-        </div>
-        
-        <div id="chosen-players-departments">
-            <h3>Chosen Players with Departments:</h3>
-            <ul id="chosen-players-with-department"></ul>
         </div>
     </div>
 
@@ -51,8 +46,9 @@
         <h6>Please do not play if you are under 18 years old.</h6>
     </div>
 
-    <audio src="https://on.soundcloud.com/Kny5b"></audio>
+        <!--Musica de fondo en pagina home-->
+    <audio id="musica" autoplay loop style="display: none;"></audio>
     <script src="script.js"></script>
-    <script src="load_departments.js"></script> <!-- Nuevo script para cargar departamentos -->
+    <script></script>
 </body>
 </html>
