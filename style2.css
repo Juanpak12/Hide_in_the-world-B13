@@ -8,13 +8,14 @@ body {
     height: 81vh;
 }
 
+
+
+
 #colombia {
     width: 30vw;
-
     fill: #02c252;
     stroke: #023f21;
     stroke-width: 2px;
-
 }
 
 /* css de la explosion al dar click*/
@@ -25,54 +26,51 @@ body {
 }
 
 
+
+
 /*Movil responsive*/
 @media (min-width: 320px) and (max-width: 700px) {
 
-
-    body {
-        background-size: cover;
-        width: 190px;
-        height: 190px;
+    body{ 
+        background-position: top;
+        background-size: 190vw 190vh;
+        font-size: 20px;
     }
-
+    
     #colombia {
-
-        stroke-width: 2px;
         background-size: cover;
+        justify-content: center;
+        align-items: center;
         width: 100vw;
         height: 90vh;
         justify-content: center;
+        align-items: center;
+        font-size: 90px;
+        margin-left: -20%;
+        margin-right: 90%;
     }
 
     #colombia :hover {
         fill: aqua;
     }
 
-    .desktop {
-        display: none;
-    }
+    
 
-    .tablet {
-        display: none;
-    }
 }
 
-@media (min-width: 820px) and (max-width: 990px) {
-    .desktop {
-        display: none;
+@media (min-width: 740px) and (max-width: 990px) {
+   
+    body{ 
+        background-position: top;
+        background-size: 125vw 125vh;
+        font-size: 20px;
     }
+ 
+ 
 
-    .movil {
-        display: none;
-    }
 }
 
 @media (min-width: 991px) {
-    .tablet {
-        display: none;
-    }
+   
 
-    .movil {
-        display: none;
-    }
 }
