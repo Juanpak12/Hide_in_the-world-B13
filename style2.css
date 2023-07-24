@@ -1,7 +1,7 @@
 body{
     padding: 5vw;
     margin: 0;
-    background: url("https://i.ibb.co/cw6HrgY/inicio-2.gif");
+    background: url("https://i.ibb.co/GWH2dw8/list-1.gif");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -16,6 +16,43 @@ body{
     stroke-width: 2px;
 
 }
-#COL99{
-    fill:aqua;
+/* css de la explosion al dar click*/
+
+#explosion-container {
+    display: none;
+    position: absolute;
+  }
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
+    }
+
+    .movil {
+        display: none;
+    }
+}
+@media (min-width: 370px) and (max-width: 700px) {
+    body{
+        background-size:cover;
+        width: 100vw;
+        height: 100vh;
+    }
+    #colombia{
+        fill:#f0e68c ;
+        stroke: #8b4513;
+        stroke-width: 2px;    
+        background-size: cover;
+        width: 100vw;
+        height: 90vh;
+        justify-content: center;
+    }
+    #colombia :hover{        
+        fill: aqua;
+    }
+.desktop {
+    display: none;
+}
+.tablet {
+    display: none;
+}
 }

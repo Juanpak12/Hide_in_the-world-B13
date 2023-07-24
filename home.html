@@ -6,8 +6,7 @@
     <title>Hide_in_the_World-Home</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <!--Arreglo a body para funcionalidad de audio-->
-  <body onclick="audio.play()">
+  <body>
     <div>
       <img
         id="logo"
@@ -37,11 +36,7 @@
 
         <button type="submit" id="agregar">AGREGAR</button>
 
-        <a id="play" class="play"
-          >INICIO
-          <span></span>
-          <span></span>
-        </a>
+        <a href="./game.html">INICIO</a>
       </form>
 
       <div id="chosen-players">
@@ -54,7 +49,6 @@
         <ul id="chosen-players-with-department"></ul>
       </div>
     </div>
-
     <div class="warning">
       <h1><strong>Warning!</strong></h1>
     </div>
@@ -67,18 +61,9 @@
       <h6>Please do not play if you are under 18 years old.</h6>
     </div>
 
-    <!--Musica de fondo en pagina home-->
-    <audio id="musica" loop autoplay>
-      <source src="queen.mp3" type="audio/mpeg" />
-      Tu navegador no soporta audio MP3.
-    </audio>
-
-    <!-- Nuevo script para cargar departamentos -->
+    <audio src="https://on.soundcloud.com/Kny5b"></audio>
     <script src="script.js"></script>
     <script src="load_departments.js"></script>
-
-    <!--Nuevos script para sonidos-->
-    <script src="play.js"></script>
-    <script src="audio.js"></script>
+    <!-- Nuevo script para cargar departamentos -->
   </body>
 </html>
