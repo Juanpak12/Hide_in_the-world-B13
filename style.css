@@ -167,6 +167,7 @@ button:hover {
     transform: scale(1.05);
 }
 
+/*Se aplica estilo a etiqueta de ancla*/
 a {
     display: inline-block;
     padding: 12px 30px;
