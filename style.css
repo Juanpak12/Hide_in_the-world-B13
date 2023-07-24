@@ -181,39 +181,174 @@ h6 {
     padding: 0;
     text-align: center;
 }
-@media (min-width: 370px) and (max-width: 700px) {
-    .h1{
-        justify-content: center;
-    }
+/Responsive Movil/
+@media  (min-width: 320px) and (max-width: 600px) {
 
-    .warning h1 h6  {
-        justify-content: center;
-        align-items: center;
-        height: auto;
-        width: auto;
-    }
-
-.img {
-    background-size:cover;
-    width: 40vw;
-    height: 40vh;
-}
-
-#player {
-    text-align: center;
-
-}   
-}
-
-
-@media screen and (min-width: 1200px) {
+ body {
     
+        background-position: top;
+        background-size: 457vw;   
+    
+ }
+
+    #logo {
+        width: 45vw;
+        height: 48vh;
+    }
+
+   h1 {
+       font-size: 28px;
+    }
+
+    #player {
+        font-size: 20px;
+        text-align: center;
+        }
+
+        #Home {
+            width: 80%;
+            max-width: 300px;
+            padding: 37px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+h3 {
+    font-size: 21px;
+    margin-bottom: 14px;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
+.player-list-item-shifted {
+    transform: translateY(10px);
+}
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-    .img {
-        justify-content: left;
-        
+#Riesgo {
+background-color: #ffffff;
+color: #ff0000;
+    padding: -4px -4px;
+    font-size: 23px;
+    margin: 9px;
+}
+
+#Game {
+    background-color: #fc0404;
+    padding: -4px -4px;
+    font-size: 23px;
+    margin: 9px;
+}
+
+}
+
+/Responsive para desktop/
+@media (min-width: 1024px) {
+
+    #logo {
+        width: 34vw;
+        height: 50vh;
     }
+
+    #Titulo {
+        justify-content: center;
+        text-align: center;
+        height: 80px;
+    }
+
+    #player {
+        padding: 18px 18px;
+        font-size: 59px;
+
+    }
+
+    #Home {
+        width: 90%;
+        max-width: 700px;
+        padding: 40px;
+        border-radius: 20px;
+        font-size: 45px;
+    }
+
+#agregar {
+    font-size: 23px;
+}
+
+#inicio {
+    font-size: 23px;
+}
+    h3 {
+        font-size: 33px;
+    }
+
+    h1 {
+        font-size: 49px;
+    }
+
+    #Riesgo {
+        background-color: #ffffff;
+        color: #ff0000;
+        padding: 4px 4px;
+        font-size: 48px;
+    }
+
+    #Game {
+        background-color: #fc0404;
+        padding: 4px 4px;
+        font-size: 48px;
+    }
+
+
+}
+
+/Responsive Tab/
+@media (min-width: 740px) and (max-width: 1020px) {
+
+    #player {
+        padding: 18px 18px;
+        font-size: 39px;
+
+    }
+
+    #Home {
+        width: 70%;
+        max-width: 740px;
+        margin: 50px auto;
+        text-align: center;
+        padding: 40px;
+        border-radius: 20px;
+    }
+
+    #logo {
+        justify-content: center;
+        height: 48vh;
+        width: 32vw;
+    }
+
+    #Titulo {
+        justify-content: center;
+    }
+
+#warning{
+    margin: 30px;
+
+}
+    #Riesgo {
+        background-color: #ffffff;
+        color: #ff0000;
+        margin: 9px;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        font-size: 35px;
+    }
+
+    #Game {
+        background-color: #fc0404;
+        margin: 9px;
+        justify-content: center;
+        width: auto;
+        height: auto;
+        font-size: 35px;
+    }
+
+
 }
