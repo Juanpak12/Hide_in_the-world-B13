@@ -270,7 +270,7 @@ ul li {
 
 
 /*Responsive para desktop*/
-@media (min-width: 1024px)  {
+@media (min-width: 1024px) {
 
     #logo {
         width: 34vw;
@@ -295,31 +295,32 @@ ul li {
 
     }
 
-#department {
-    text-align: end;
-    padding: 9px 9px 9px 9px;
-}
-
-    #Riesgo {
-        justify-content: center;
-        width: auto;
-        height: auto;
-        padding: -4px -4px;
-        font-size: 18px;
+    #department {
+        text-align: end;
+        padding: 9px 9px 9px 9px;
     }
 
-    #Game {
-        justify-content: center;
-        width: auto;
-        height: auto;
-        padding: -4px -4px;
-        font-size: 18px;
+    h3 {
+        font-size: 26px;
     }
 
     h1 {
         font-size: 49px;
     }
-    
+
+    #Riesgo {
+
+        padding: -4px -4px;
+        font-size: 18px;
+    }
+
+    #Game {
+
+        padding: -4px -4px;
+        font-size: 18px;
+    }
+
+
 }
 
 
@@ -355,13 +356,6 @@ ul li {
         justify-content: center;
         width: auto;
         height: auto;
-    }
-
-    button[type="submit"] {
-        justify-content: center;
-        height: 9vh;
-        background-position: 0svb;
-
     }
 
 
