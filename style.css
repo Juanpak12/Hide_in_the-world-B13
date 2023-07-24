@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://i.ibb.co/cw6HrgY/inicio-2.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+img{
+    height: 350px;
+    width: 350px;
+    margin: 20px;
+}
+h1{
+    color: white;
+    font-size: 35px;
+}
+#player{
+    background-color: white;
+    padding: 10px 10px;
+    display: block;
+    border: 10px solid black;
+    font-family:'Rubik Glitch';
+    font-size: 40px;
+    text-align: center;
+}
+::placeholder{
+    color: red;
+}
+.inicio{
+    position: relative;
+    padding: 10px 30px;
+    border: 3px solid;
+    text-decoration: none;
+    color: black;
+    background: white;
+    transition: all 0.6s ease;
+}
+
+.inicio:hover{
+    background-color: brown;
+    box-shadow: 0 0 30px red;
+    border-color: black;
+}
+
+.inicio span:nth-child(n){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+
+}
+
+.inicio span:nth-child(1){
+    right: 10%;
+    top: -1%;
+    background-color: brown;
+}
+
+.inicio span:nth-child(2){
+    left: 10%;
+    bottom: -10px;
+    background-color: white;
+}
+
+.inicio:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: var(--color);
+    background-color: white;
+}
+
+.inicio:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate(90deg);
+    background-color: brown;
+}
+#Home {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    justify-items: space-between;
+    padding: 40px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+#agregar{
+    position: relative;
+    padding: 10px 30px;
+    border: 3px solid;
+    text-decoration: none;
+    color: black;
+    background: white;
+    transition: all 0.6s ease;
+}
+#agregar:hover{
+    background-color: brown;
+    box-shadow: 0 0 30px red;
+    border-color: black;
+}
+#agregar span:nth-child(n){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+
+}
+#agregar span:nth-child(1){
+    right: 10%;
+    top: -1%;
+    background-color: brown;
+}
+#agregar span:nth-child(2){
+    left: 10%;
+    bottom: -10px;
+    background-color: white;
+}
+#agregar:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: var(--color);
+    background-color: white;
+}
+#agregar:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate(90deg);
+    background-color: brown;
+}
+#chosen-players {
+        color: #fff;
+}
+
+/*Se aplica estilo a titulos h3*/
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/*Se aplica estilo CSS a lista ordenada y desordenada*/
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.player-list-item {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s; /* Transición suave para el desplazamiento */
+}
+
+
+/* Estilos para el desplazamiento hacia abajo después de cada cuarto jugador */
+.player-list-item-shifted {
+    transform: translateY(20px); /* Puedes ajustar el valor para el desplazamiento */
+}
+
+/* Estilos para la barra de desplazamiento */
+#chosen-player {
+    max-height: none;
+    overflow-y: visible;
+}
+#warning{
+    color: rgb(229, 245, 4);
+    text-align: center;
+}
+h6 {
+    color: black;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+@media (min-width: 370px) and (max-width: 700px) {
+    .h1{
+        justify-content: center;
+    }
+
+    .warning h1 h6  {
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: auto;
+    }
+
+.img {
+    background-size:cover;
+    width: 40vw;
+    height: 40vh;
+}
+
+#player {
+    text-align: center;
+
+}   
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .img {
+        justify-content: left;
+        
+    }
+}

@@ -1,49 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hide_in_the-World-Home</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide_in_the_World-Home</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../meta/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../meta/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../meta/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../meta/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../meta/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../meta/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../meta/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../meta/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../meta/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../meta/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../meta/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../meta/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../meta/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+ <!--Arreglo a body para funcionalidad de audio-->
+<body>
     <div>
-      <img
-        src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png"
-        width="80px"
-        height="80px"
-        alt="logovertical-colombia"
-      />
+        <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
     </div>
 
-    <h1>Hide in the World Play</h1>
+    <h1>Escondete en Colombia</h1> 
 
-    <form id="start-form">
-      <label for="player">Player (required):</label>
-      <input type="text" id="player" name="player" required /><br /><br />
+    <div id="players-section">
+        <form id="start-form">
+            <label for="player"></label>
+            <input type="text" id="player" placeholder="Escribe tu nombre" name="player" required /><br /><br />
+        <div id="Home">
+            
+                <button type="submit" id="agregar">AGREGAR</button>
 
-      <div id="players-section">
-        <div id="chosen-players">
-          <h3>Chosen Players:</h3>
-          <ul id="chosen-player-names"></ul>
+                <a id="inicio" class="inicio">INICIO
+                    <span></span>
+                    <span></span>
+                </a>
+            </form>
+            <div id="chosen-players">
+                <h3>Players list:</h3>
+                <ul id="chosen-player-names"></ul>
+            </div>
         </div>
-      </div>
-
-      <div class="warning">
-        <h1><strong>Warning!</strong></h1>
-      </div>
-
-      <div class="warning">
+    </div>
+    <div class="warning">
+        <h1 id="warning"><strong>Warning!</strong></h1>
         <h6>We are not responsible for any traumas caused by this game.</h6>
-      </div>
-
-      <div class="warning">
         <h6>Please do not play if you are under 18 years old.</h6>
-      </div>
-
-      <button type="submit">PLAY</button>
-    </form>
-
+    </div>
+        <!--Musica de fondo en pagina home-->
+    <audio id="musica" autoplay loop style="display: none;"></audio>
     <script src="script.js"></script>
-  </body>
+    <script></script>
+</body>
 </html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./index.css" rel="stylesheet">
+    <title>Hide_in_the_World</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="../meta/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../meta/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../meta/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../meta/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../meta/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../meta/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../meta/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../meta/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../meta/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="../meta/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../meta/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../meta/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../meta/favicons/favicon-16x16.png">
+</head>
+<body>
+    <div>
+        <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
+    </div>
+    <a  id="start" class="button"> Start 
+        <span></span>
+        <span></span>
+    </a>
+                <!--Musica de fondo en pagina home-->
+    <audio id="musica1" loop autoplay>
+        <source src="./Media/Castevania Order of Ecclesia ost 01.mp3" type="audio/mpeg" />
+            Tu navegador no soporta audio MP3.
+    </audio>
+    <script>
+    // funcionalidad de audio de fondo en pagina//
+      document.addEventListener('DOMContentLoaded', function () {
+        let audio = document.getElementById("musica1");
+        audio.oncanplaythrough = function () {
+        audio.play();
+        };
+        })
+
+        function reproducirAudio() {
+            var audio = new Audio("./Media/O.K.mp3");
+            audio.play();
+            audio.onended = function () {
+              window.location.href = "./home.html";
+            };
+          }
+          document.getElementById("start").addEventListener("click", reproducirAudio);
+    </script>
+</body>
+</html>
