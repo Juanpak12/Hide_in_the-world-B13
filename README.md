@@ -45,7 +45,7 @@ podrás escoger un departamento y lanzar una bomba, el nombre que esta oculta en
 - Una de las caracteristicas destacadas de la aplicacion es la animacion de audio al momento antes de iniciar el juego.
 - El uso de imagenes de fondo con animaciones gif.
 - Logo original.
-
+- https://www.canva.com/design/DAFpgHmuZ8I/_OS-aBlWpSawvOFa91ZOIg/edit?utm_content=DAFpgHmuZ8I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 ## Equipo de desarrollo del proyecto:
 
