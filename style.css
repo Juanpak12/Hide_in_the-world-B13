@@ -26,12 +26,12 @@ h1 {
 
 
 
-#Player {
+#player {
     background-color: white;
     padding: 7px 7px;
     display: block;
     border: 10px solid black;
-    font-family:'Rubik Glitch';
+    font-family: 'Rubik Glitch';
     font-size: 40px;
     text-align: center;
 }
@@ -39,7 +39,8 @@ h1 {
 ::placeholder {
     color: red;
 }
-.inicio{
+
+.inicio {
     position: relative;
     padding: 10px 30px;
     border: 3px solid;
@@ -49,13 +50,13 @@ h1 {
     transition: all 0.6s ease;
 }
 
-.inicio:hover{
+.inicio:hover {
     background-color: brown;
     box-shadow: 0 0 30px red;
     border-color: black;
 }
 
-.inicio span:nth-child(n){
+.inicio span:nth-child(n) {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -64,30 +65,31 @@ h1 {
 
 }
 
-.inicio span:nth-child(1){
+.inicio span:nth-child(1) {
     right: 10%;
     top: -1%;
     background-color: brown;
 }
 
-.inicio span:nth-child(2){
+.inicio span:nth-child(2) {
     left: 10%;
     bottom: -10px;
     background-color: white;
 }
 
-.inicio:hover span:nth-child(1){
+.inicio:hover span:nth-child(1) {
     right: 80%;
     transform: rotate(90deg);
     color: var(--color);
     background-color: white;
 }
 
-.inicio:hover span:nth-child(2){
+.inicio:hover span:nth-child(2) {
     left: 80%;
     transform: rotate(90deg);
     background-color: brown;
 }
+
 #Home {
     width: 80%;
     max-width: 600px;
@@ -99,7 +101,8 @@ h1 {
     background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
-#agregar{
+
+#agregar {
     position: relative;
     padding: 10px 30px;
     border: 3px solid;
@@ -108,12 +111,14 @@ h1 {
     background: white;
     transition: all 0.6s ease;
 }
-#agregar:hover{
+
+#agregar:hover {
     background-color: brown;
     box-shadow: 0 0 30px red;
     border-color: black;
 }
-#agregar span:nth-child(n){
+
+#agregar span:nth-child(n) {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -121,29 +126,34 @@ h1 {
     transition: all 0.6s ease;
 
 }
-#agregar span:nth-child(1){
+
+#agregar span:nth-child(1) {
     right: 10%;
     top: -1%;
     background-color: brown;
 }
-#agregar span:nth-child(2){
+
+#agregar span:nth-child(2) {
     left: 10%;
     bottom: -10px;
     background-color: white;
 }
-#agregar:hover span:nth-child(1){
+
+#agregar:hover span:nth-child(1) {
     right: 80%;
     transform: rotate(90deg);
     color: var(--color);
     background-color: white;
 }
-#agregar:hover span:nth-child(2){
+
+#agregar:hover span:nth-child(2) {
     left: 80%;
     transform: rotate(90deg);
     background-color: brown;
 }
+
 #chosen-players {
-        color: #fff;
+    color: #fff;
 }
 
 /*Se aplica estilo a titulos h3*/
@@ -163,13 +173,15 @@ ul {
     font-size: 18px;
     margin-bottom: 10px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s; /* Transición suave para el desplazamiento */
+    transition: transform 0.3s;
+    /* Transición suave para el desplazamiento */
 }
 
 
 /* Estilos para el desplazamiento hacia abajo después de cada cuarto jugador */
 .player-list-item-shifted {
-    transform: translateY(20px); /* Puedes ajustar el valor para el desplazamiento */
+    transform: translateY(20px);
+    /* Puedes ajustar el valor para el desplazamiento */
 }
 
 /* Estilos para la barra de desplazamiento */
@@ -177,10 +189,12 @@ ul {
     max-height: none;
     overflow-y: visible;
 }
-#warning{
-    color: rgb(229, 245, 4);
+
+#warning {
+    color: rgb(255, 0, 0);
     text-align: center;
 }
+
 h6 {
     color: black;
     font-size: 24px;
@@ -188,42 +202,65 @@ h6 {
     padding: 0;
     text-align: center;
 }
-@media (min-width: 370px) and (max-width: 700px) {
+
+/*Responsive Movil*/
+@media  (min-width: 320px) and (max-width: 600px) {
+
+ body {
+    
+        background-position: top;
+        background-size: 457vw;   
+    
+ }
 
     #logo {
-        width: 40vw;
-        height: 39vh;
+        width: 45vw;
+        height: 48vh;
     }
 
-    #Titulo {
-        height: 12px;
-        justify-content: center;
-        text-align: center;
-    }
-
-    label {
-        text-align: right;
-        height: 4px;
-        width: 4px;
-
+   h1 {
+       font-size: 28px;
     }
 
     #player {
+        font-size: 20px;
+        text-align: center;
+        }
 
-        padding: 8px 8px;
-        font-size: 24px;
+        #Home {
+            width: 80%;
+            max-width: 300px;
+            padding: 37px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
 
-    }
-
-    #Player {
-        padding: 8px 8px;
-        font-size: 24px;
-
-    }
-
-
+h3 {
+    font-size: 21px;
+    margin-bottom: 14px;
+    text-shadow: 2px 2px 4px rgb(255, 255, 255);
 }
 
+.player-list-item-shifted {
+    transform: translateY(10px);
+}
+
+#Riesgo {
+background-color: #ffffff;
+color: #ff0000;
+    padding: -4px -4px;
+    font-size: 23px;
+    margin: 9px;
+}
+
+#Game {
+    background-color: #fc0404;
+    padding: -4px -4px;
+    font-size: 23px;
+    margin: 9px;
+}
+
+}
 
 /*Responsive para desktop*/
 @media (min-width: 1024px) {
@@ -241,23 +278,27 @@ h6 {
 
     #player {
         padding: 18px 18px;
-        font-size: 49px;
+        font-size: 59px;
 
     }
 
-    #Player {
-        padding: 18px 18px;
-        font-size: 49px;
-
+    #Home {
+        width: 90%;
+        max-width: 700px;
+        padding: 40px;
+        border-radius: 20px;
+        font-size: 45px;
     }
 
-    #department {
-        text-align: end;
-        padding: 9px 9px 9px 9px;
-    }
+#agregar {
+    font-size: 23px;
+}
 
+#inicio {
+    font-size: 23px;
+}
     h3 {
-        font-size: 26px;
+        font-size: 33px;
     }
 
     h1 {
@@ -265,27 +306,34 @@ h6 {
     }
 
     #Riesgo {
-
-        padding: -4px -4px;
-        font-size: 18px;
+        background-color: #ffffff;
+        color: #ff0000;
+        padding: 4px 4px;
+        font-size: 48px;
     }
 
     #Game {
-
-        padding: -4px -4px;
-        font-size: 18px;
+        background-color: #fc0404;
+        padding: 4px 4px;
+        font-size: 48px;
     }
 
 
 }
 
+/*Responsive Tab*/
+@media (min-width: 740px) and (max-width: 1020px) {
 
-@media (min-width: 750px) and (max-width: 1020px) {
+    #player {
+        padding: 18px 18px;
+        font-size: 39px;
+
+    }
 
     #Home {
-        width: 80%;
-        max-width: 750px;
-        margin: 100px auto;
+        width: 70%;
+        max-width: 740px;
+        margin: 50px auto;
         text-align: center;
         padding: 40px;
         border-radius: 20px;
@@ -301,17 +349,27 @@ h6 {
         justify-content: center;
     }
 
+#warning{
+    margin: 30px;
 
+}
     #Riesgo {
+        background-color: #ffffff;
+        color: #ff0000;
+        margin: 9px;
         justify-content: center;
         width: auto;
         height: auto;
+        font-size: 35px;
     }
 
     #Game {
+        background-color: #fc0404;
+        margin: 9px;
         justify-content: center;
         width: auto;
         height: auto;
+        font-size: 35px;
     }
 
 
