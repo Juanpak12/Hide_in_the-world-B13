@@ -68,41 +68,77 @@ a{
     font-size: 4em;
     text-decoration: none;
 }
-    /* Media queries para celulares en modo retrato y celular invertido */
-    @media (max-width: 480px) {
-      #logo {
-        width: 40vw;
-      }
-      .button {
-        padding: 8px 20px;
-      }
-      a {
-        font-size: 3em;
-      }
+/* Estilos para dispositivos móviles y tablets */
+  @media  (min-width: 320px) and (max-width: 600px) {
+
+    body{
+        background-position: top;
+        background-size: 398vw;
+       
+    }
+    
+    #logo {
+    
+      width: 42vw;
+      height: 45vh;
     }
 
-    /* Media query para tablet */
-    @media (min-width: 481px) and (max-width: 768px) {
-      #logo {
-        width: 30vw;
-      }
-      .button {
-        padding: 12px 25px;
-      }
-      a {
-        font-size: 3.5em;
-      }
+    #start {
+      font-size: 19px;
+      padding: 17px 17px;
     }
 
-    /* Media query para portátil mini */
-    @media (min-width: 769px) and (max-width: 1024px) {
-      #logo {
-        width: 25vw;
-      }
-      .button {
-        padding: 15px 30px;
-      }
-      a {
-        font-size: 4em;
-      }
+
+  }
+
+
+  /Estilos para tab/
+  @media (min-width: 690px) and (max-width: 1023px) {
+
+    
+    body{
+        background-position:top;
+        background-size: 120%;
+     
     }
+
+
+    #logo {  
+      width: 31vw;
+      height: 55vh;
+      align-items: center;
+    }
+
+
+    #start {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+    
+  }
+  
+
+
+/* Estilos para escritorios */
+  @media (min-width: 780px) {
+
+    body{
+        background-position:top;
+        background-size: 120%;
+
+    }
+
+    
+    #start {
+      font-size: 38px;
+      padding: 15px 30px;
+    }
+
+   #logo {
+        width: 31vw;
+        height: 55vh;
+      
+    }
+
+
+  }
