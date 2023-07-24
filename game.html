@@ -4,22 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hide_in_the-World-Play</title>
-            <!-- FAVICONS -->
-      <link rel="apple-touch-icon" sizes="57x57" href="../meta/favicons/apple-icon-57x57.png">
-      <link rel="apple-touch-icon" sizes="60x60" href="../meta/favicons/apple-icon-60x60.png">
-      <link rel="apple-touch-icon" sizes="72x72" href="../meta/favicons/apple-icon-72x72.png">
-      <link rel="apple-touch-icon" sizes="76x76" href="../meta/favicons/apple-icon-76x76.png">
-      <link rel="apple-touch-icon" sizes="114x114" href="../meta/favicons/apple-icon-114x114.png">
-      <link rel="apple-touch-icon" sizes="120x120" href="../meta/favicons/apple-icon-120x120.png">
-      <link rel="apple-touch-icon" sizes="144x144" href="../meta/favicons/apple-icon-144x144.png">
-      <link rel="apple-touch-icon" sizes="152x152" href="../meta/favicons/apple-icon-152x152.png">
-      <link rel="apple-touch-icon" sizes="180x180" href="../meta/favicons/apple-icon-180x180.png">
-      <link rel="icon" type="image/png" sizes="192x192"  href="../meta/favicons/android-icon-192x192.png">
-      <link rel="icon" type="image/png" sizes="32x32" href="../meta/favicons/favicon-32x32.png">
-      <link rel="icon" type="image/png" sizes="96x96" href="../meta/favicons/favicon-96x96.png">
-      <link rel="icon" type="image/png" sizes="16x16" href="../meta/favicons/favicon-16x16.png">
-      <link rel="stylesheet" href="style2.css"/>
-      <link rel="stylesheet" href="Popup_dead_coder.css">
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="57x57" href="./meta/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./meta/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./meta/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./meta/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./meta/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./meta/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./meta/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./meta/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./meta/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./meta/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./meta/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./meta/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./meta/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="style2.css"/>
+    <link rel="stylesheet" href="Popup_dead_coder.css">
   </head>
   <body>
 
@@ -238,41 +238,45 @@
           <img id="explosion-gif" src="https://i.ibb.co/zPQ51B6/prueba-explosici-n.gif" alt="Explosion">
         </div>
   
-          <!-- Modal para el pop-up -->
-      <div id="modal_container" class="modal-container">
-        <div class="container_imagen">
-            <img src="./meta/favicons/Mm-M.png" id="imagen">
-        </div>
-        <div class="modal">
-            <h3 id="alertPlayerDeleted"></h3>
-            <h4>Coders muertos:</h4>
-            <ul id="deadCodersList"></ul>
-            <div class="container_bottons" id="container_buttons">
-                <div id="nextKill">
-                    <img src="./meta/favicons/cont.png" alt="continue button" class="btcontinue">
-                </div>
-                <button id="gameOverButton" >Game Over
-                  <span></span>
-                  <span></span>
-                </button>
-            </div>
-        </div>
+        <!-- Modal para el pop-up -->
+        <div id="modal_container" class="modal-container">
+          <div class="container_imagen">
+              <img src="./meta/favicons/Mm-M.png" id="imagen">
+          </div>
+          <div class="modal">
+              <h3 id="alertPlayerDeleted"></h3>
+              <h4>Coders muertos:</h4>
+              <ul id="deadCodersList"></ul>
+              <div class="container_bottons" id="container_buttons">
+                  <div id="nextKill">
+                      <img src="./meta/favicons/cont.png" alt="continue button" class="btcontinue">
+                  </div>
+                  <button id="gameOverButton" >Game Over
+                    <span></span>
+                    <span></span>
+                  </button>
+              </div>
+          </div>
+      </div>
+    
+      <button id="reset-game">Reiniciar Juego</button>
+      <div id="gameIsOver">
+        <div class="popup">
+        <h1>Game Over!</h1>
+        <p>Coders muertos: <span id="deadCodersCount">0</span></p>
+        <p>Presiona "Game Over" para reiniciar el juego.</p>
+        <button href="./home.html" id="reset-game">Reiniciar Juego</button>
+      </div>
     </div>
+    
 
-  <audio id="music" autoplay loop style="display: none;"></audio>
-  
-  
-  <div id="gameIsOver">
-    <div class="popup">
-    <h1>Game Over!</h1>
-    <p>Coders muertos: <span id="deadCodersCount">0</span></p>
-    <p>Presiona "Game Over" para reiniciar el juego.</p>
-    <button href="./home.html" id="reset-game">Reiniciar Juego</button>
-  </div>
-</div>
-
-
+<audio id="music" autoplay loop style="display: none;"></audio>
   <script src="script.js"></script>
   <script src="script_game.js"></script>
+  <script>
+    // Guardar la lista de jugadores en el almacenamiento local
+    const playerList = document.getElementById("chosen-player-names");
+    localStorage.setItem("playerList", playerList.innerHTML);
+</script>
   </body>
 </html>

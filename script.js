@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 departments.push(departmentID);
             }
             });
-            console.log("Departamentos cargados:", departments);
         })
         .catch((error) => {
             console.error("Error fetching and loading departments:", error);
@@ -82,10 +81,13 @@ document.addEventListener("DOMContentLoaded", function () {
     playerInput.addEventListener("input", function () {
       document.getElementById("agregar").disabled = false;
     });
+    function updateLocalStorage() {
+      localStorage.setItem("playerList", JSON.stringify(playerList));
+      localStorage.setItem("departmentList", JSON.stringify(departmentList));
+    }
   });
     function agregarJugador(nombre, departamento) {
     playersData.push({ nombre, departamento });
-    console.log("Jugador agregado:", { nombre, departamento });
   }
     // Función para cargar el audio al iniciar la página
     function cargarAudio() {

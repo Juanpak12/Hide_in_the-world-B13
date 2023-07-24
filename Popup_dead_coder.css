@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 
+
 * {
   box-sizing: border-box;
 }
@@ -15,7 +16,10 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: "Orbitron";
+
 }
+
+
 
 .modal-container {
   display: flex;
@@ -33,11 +37,12 @@ body {
   flex-direction: column;
 
 }
+
 .show {
   pointer-events: auto;
   opacity: 1;
-  
 }
+
 .modal {
   background: linear-gradient(60deg, rgba(42, 6, 9, 0.7), black);
   border: 3px solid;
@@ -69,9 +74,12 @@ body {
 
 }
 
+
 #imagen {
   width: 100%;
   height: 150%;
+  
+
 }
 
 .container_imagen {
@@ -88,6 +96,8 @@ body {
   width: 80%;
   cursor: pointer;
 }
+
+
 .container_bottons{
   display: flex;
   justify-content: space-evenly;
@@ -114,6 +124,9 @@ button:hover{
   box-shadow: 0 0 30px white;
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+
+
 
 /* Media movile-tablet */
 @media (max-width: 1024px) {
