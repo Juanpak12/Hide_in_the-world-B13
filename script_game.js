@@ -9,6 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const deadCodersList = document.getElementById("deadCodersList");
     const resetButton = document.getElementById("reset-game");
     let isGameOver = false;
+        // Obtener el contenedor de la explosión y el elemento del GIF de explosión
+    const explosionContainer = document.getElementById("explosion-container");
+    const explosionGif = document.getElementById("explosion-gif");
+  
 
     // Recuperar la lista de jugadores y departamentos del almacenamiento local
     const storedPlayerList = localStorage.getItem("playerList");
@@ -26,8 +30,44 @@ document.addEventListener("DOMContentLoaded", function () {
                 showModal(target.getAttribute("data-department"));
             }
         }
+        // Mostrar la explosión justo sobre el departamento clickeado
+        const explosionSize = 400; // Tamaño de la explosión (ajusta según tus necesidades)
+        const x = event.clientX - explosionSize / 2;
+        const y = event.clientY - explosionSize / 2;
+        showExplosion(x, y);
     });
+    // Función para mostrar la explosión en las coordenadas especificadas
 
+        function showExplosion(x, y) {
+            const explosionContainer = document.getElementById("explosion-container");
+            explosionContainer.style.display = "flex";
+            explosionContainer.style.left = x + "0";
+            explosionContainer.style.top = y + "0";
+
+            // Crear un nuevo elemento de audio para la explosión
+            const explosionAudio = new Audio("./Media/sonidoBomba.mp3");
+
+            // Agregar un evento para reanudar la música cuando la explosión termine
+            explosionAudio.addEventListener("ended", function () {
+                // Reanudar la música cuando la explosión termine
+                music.play();
+            });
+
+            // Pausar la música o bajar el volumen
+            music.volume = 0.4; // para bajar el volumen al 20%
+
+            // Reproducir el audio de la explosión
+            explosionAudio.play();
+
+            // Ocultar la explosión después de 1 segundo (1000 milisegundos)
+            setTimeout(function () {
+                hideExplosion();
+            }, 4300); // Ajusta el tiempo para que coincida con la duración del gif de la explosión
+        }
+        function hideExplosion() {
+            explosionContainer.style.display = "none";
+          }
+    
      // Evento de clic para reiniciar el juego y redirigir a home
   resetButton.addEventListener("click", function () {
     // Limpiar el almacenamiento local y redirigir a home
@@ -111,4 +151,45 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     initGame();
+});
+document.addEventListener('DOMContentLoaded', function () {
+    // Crear el elemento de audio
+    const music = new Audio();
+
+    // Lista de canciones en secuencia
+    const canciones = [
+        "./Media/Castevania Order of Ecclesia ost 06 Deliberate Blink.mp3",
+        "./Media/Castevania Order of Ecclesia ost 03 Heroic Dawning.mp3",
+        "./Media/Castevania Order of Ecclesia ost 05 Vanishing.mp3",        
+        "./Media/Europe  The Final Countdown.mp3",
+        // Agrega más canciones si es necesario
+    ];
+
+    let songNow = 0; // Índice de la canción actual
+
+    // Función para cargar y reproducir la siguiente canción
+    function loadNextSong() {
+        if (songNow < canciones.length) {
+            music.src = canciones[songNow];
+            music.load(); // Carga la nueva canción
+            music.play(); // Reproducir la canción
+            songNow = ++songNow;
+        } else {
+            // Reiniciar el índice si se han reproducido todas las canciones
+            songNow = 0;
+            music.src = canciones[songNow]; // Cargar la primera canción nuevamente
+            music.load(); // Cargar la primera canción
+            music.play(); // Reproducir la primera canción
+        }
+    }
+
+    // Evento para reproducir la siguiente canción cuando la anterior termina
+    music.addEventListener("ended", function () {
+        loadNextSong(); // Inicia la reproducción de la siguiente canción
+    });
+
+    // Iniciar la reproducción de la primera canción
+    loadNextSong();
+        // Ajustar el volumen del audio de fondo al 40%
+        music.volume = 0.18;
 });

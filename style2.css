@@ -1,7 +1,7 @@
 body{
     padding: 5vw;
     margin: 0;
-    background: url("https://i.ibb.co/2qfMJps/list-3.gif");
+    background: url("https://i.ibb.co/GWH2dw8/list-1.gif");
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -16,32 +16,21 @@ body{
     stroke-width: 2px;
 
 }
+/* css de la explosion al dar click*/
 
+#explosion-container {
+    display: none;
+    position: absolute;
+  }
+@media (min-width: 991px) {
+    .tablet {
+        display: none;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .movil {
+        display: none;
+    }
+}
 @media (min-width: 370px) and (max-width: 700px) {
     body{
         background-size:cover;
@@ -66,23 +55,4 @@ body{
 .tablet {
     display: none;
 }
-}
-
-/*@media (min-width: 820px) and (max-width: 990px) {
-    .desktop {
-        display: none;
-    }
-    .movil {
-        display: none;
-    }
-}
-
-@media (min-width: 991px) {
-    .tablet {
-        display: none;
-    }
-
-    .movil {
-        display: none;
-    }
 }

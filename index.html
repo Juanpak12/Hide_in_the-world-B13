@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +10,32 @@
     <div>
         <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
     </div>
-    <a href="./home.html" class="button"> Start 
+    <a  id="start" class="button"> Start 
         <span></span>
         <span></span>
     </a>
+                <!--Musica de fondo en pagina home-->
+    <audio id="musica1" loop autoplay>
+        <source src="./Media/Castevania Order of Ecclesia ost 01.mp3" type="audio/mpeg" />
+            Tu navegador no soporta audio MP3.
+    </audio>
+    <script>
+    // funcionalidad de audio de fondo en pagina//
+      document.addEventListener('DOMContentLoaded', function () {
+        let audio = document.getElementById("musica1");
+        audio.oncanplaythrough = function () {
+        audio.play();
+        };
+        })
+
+        function reproducirAudio() {
+            var audio = new Audio("./Media/O.K.mp3");
+            audio.play();
+            audio.onended = function () {
+              window.location.href = "./home.html";
+            };
+          }
+          document.getElementById("start").addEventListener("click", reproducirAudio);
+    </script>
 </body>
 </html>
