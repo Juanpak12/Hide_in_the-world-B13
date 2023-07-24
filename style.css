@@ -202,6 +202,7 @@ h3 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+/*Se aplica estilo CSS a lista ordenada y desordenada*/
 ul {
     list-style: none;
     padding: 0;
