@@ -116,49 +116,29 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.clear();
         window.location.href = "./home.html";
     });
-    function showModal(departmentName) {
-        modalContainer.classList.add("show");
-    
-        const player = playerList.find(player => player.department === departmentName);
-    
-        if (player) {
-            const playerName = player.name;
-            alertPlayerDeleted.textContent = `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`;
-            const listItem = document.createElement("li");
-            listItem.textContent = `${playerName}, ${departmentName}`;
-            deadCodersList.appendChild(listItem);
-    
-            // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
-            playerList = playerList.filter(player => player.department !== departmentName);
-            updateLocalStorage();
-        } else {
-            alertPlayerDeleted.textContent = `No se encontraron coders en el departamento ${departmentName}.`;
-        }
-    
-        const remainingDepartments = document.querySelectorAll("path:not(.killed)");
-        if (remainingDepartments.length === 0) {
-            isGameOver = true;
-            showGameOver();
-        }
-    }
     // Agregar esta variable para almacenar los nombres de los jugadores eliminados
-    let deadPlayerList = [];
     
     function showModal(departmentName) {
         modalContainer.classList.add("show");
     
         const coderIndex = departmentList.findIndex((department) => department === departmentName);
-        if (coderIndex !== -1) {
-            const playerName = playerList[coderIndex].name;
-            alertPlayerDeleted.textContent = `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`;
-            const listItem = document.createElement("li");
-            listItem.textContent = `${playerName}, ${departmentName}`;
-            deadCodersList.appendChild(listItem);
     
-            // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
-            playerList = playerList.filter((player) => player.department !== departmentName);
-            departmentList = departmentList.filter((department) => department !== departmentName);
-            updateLocalStorage();
+        if (coderIndex !== -1) {
+            const playerName = playerList[coderIndex]?.name;
+            alertPlayerDeleted.textContent = playerName
+                ? `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`
+                : `No se encontraron coders en el departamento ${departmentName}.`;
+    
+            if (playerName) {
+                const listItem = document.createElement("li");
+                listItem.textContent = `${playerName}, ${departmentName}`;
+                deadCodersList.appendChild(listItem);
+    
+                // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
+                playerList = playerList.filter((player) => player.department !== departmentName);
+                departmentList = departmentList.filter((department) => department !== departmentName);
+                updateLocalStorage();
+            }
         } else {
             alertPlayerDeleted.textContent = `No se encontraron coders en el departamento ${departmentName}.`;
         }
@@ -169,32 +149,6 @@ document.addEventListener("DOMContentLoaded", function () {
             showGameOver();
         }
     }
-
-    /*function showModal(departmentName) {
-        modalContainer.classList.add("show");
-    
-        const player = playerList.find(player => player.department === departmentName);
-    
-        if (player) {
-            const playerName = player.name;
-            alertPlayerDeleted.textContent = `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`;
-            const listItem = document.createElement("li");
-            listItem.textContent = `${playerName}, ${departmentName}`;
-            deadCodersList.appendChild(listItem);
-    
-            // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
-            playerList = playerList.filter(player => player.department !== departmentName);
-            updateLocalStorage();
-        } else {
-            alertPlayerDeleted.textContent = `No se encontraron coders en el departamento ${departmentName}.`;
-        }
-    
-        const remainingDepartments = document.querySelectorAll("path:not(.killed)");
-        if (remainingDepartments.length === 0) {
-            isGameOver = true;
-            showGameOver();
-        }
-    }*/
 
     function hideModal() {
         modalContainer.classList.remove("show");
@@ -231,35 +185,31 @@ document.addEventListener("DOMContentLoaded", function () {
         gameOverButton.style.display = "none";
     }
     // Cargar los datos del almacenamiento local al cargar la página
-
     function loadLocalStorage() {
         const storedPlayerList = localStorage.getItem("playerList");
         const storedDepartmentList = localStorage.getItem("departmentList");
+    
         if (storedPlayerList && storedDepartmentList) {
-            playerList = JSON.parse(storedPlayerList);
+            playerList = JSON.parse(storedPlayerList).map(playerName => ({ name: playerName }));
             departmentList = JSON.parse(storedDepartmentList);
             console.log("Loaded playerList:", playerList);
             console.log("Loaded departmentList:", departmentList);
+    
+            // Limpiamos la lista de jugadores muertos al cargar el almacenamiento local
+            deadCodersList.innerHTML = "";
+    
+            // Recorremos los departamentos para verificar si hay jugadores en ellos
+            departmentList.forEach((departmentName) => {
+                const player = playerList.find(player => player.department === departmentName);
+                if (player) {
+                    const playerName = player.name;
+                    const listItem = document.createElement("li");
+                    listItem.textContent = `${playerName}, ${departmentName}`;
+                    deadCodersList.appendChild(listItem);
+                }
+            });
         }
-    
-        // Vaciar la lista de jugadores muertos al cargar el almacenamiento local
-        deadCodersList.innerHTML = "";
     }
-    
-    
-    /*function loadLocalStorage() {
-        const storedPlayerList = localStorage.getItem("playerList");
-        const storedDepartmentList = localStorage.getItem("departmentList");
-        playerList = storedPlayerList ? JSON.parse(storedPlayerList) : [];
-        departmentList = storedDepartmentList ? JSON.parse(storedDepartmentList) : [];
-        playerList.forEach((playerName, index) => {
-            const departmentName = departmentList[index];
-            const listItem = document.createElement("li");
-            listItem.textContent = `${playerName}, ${departmentName}`;
-            deadCodersList.appendChild(listItem);
-        });
-    }*/
-
     loadLocalStorage(); // Cargar los datos al iniciar la página
     initGame(); // Iniciar el juego
 
