@@ -22,7 +22,6 @@ img {
 h1 {
     color: white;
     font-size: 35px;
-
 }
 
 #player {
@@ -54,13 +53,15 @@ h1 {
     color: red;
 }
 
-#chosen-players{
+#chosen-players {
     color: white;
 }
-#chosen-players-names{
+
+#chosen-players-names {
     color: white;
 }
-.warning{
+
+.warning {
     color: white;
 }
 
@@ -244,15 +245,15 @@ ul li {
         text-align: center;
     }
 
-label {
-    text-align: right;
-    height: 4px;
-    width: 4px;
+    label {
+        text-align: right;
+        height: 4px;
+        width: 4px;
 
-}
+    }
 
-#player {
-        
+    #player {
+
         padding: 8px 8px;
         font-size: 24px;
 
@@ -269,12 +270,11 @@ label {
 
 
 /*Responsive para desktop*/
-@media (min-width: 1024px) and (max-width: 1700px) {
+@media (min-width: 1024px)  {
 
-    
     #logo {
-        width: 42vw;
-        height: 52vh;
+        width: 34vw;
+        height: 50vh;
     }
 
     #Titulo {
@@ -283,30 +283,48 @@ label {
         height: 80px;
     }
 
-label {
-    text-align: right;
-    height: 40px;
-    width: 40px;
-
-}
-
-#player {
-        
-        padding: 8px 8px;
-        font-size: 24px;
+    #player {
+        padding: 18px 18px;
+        font-size: 49px;
 
     }
 
     #Player {
-        padding: 8px 8px;
-        font-size: 24px;
+        padding: 18px 18px;
+        font-size: 49px;
 
     }
+
+#department {
+    text-align: end;
+    padding: 9px 9px 9px 9px;
+}
+
+    #Riesgo {
+        justify-content: center;
+        width: auto;
+        height: auto;
+        padding: -4px -4px;
+        font-size: 18px;
+    }
+
+    #Game {
+        justify-content: center;
+        width: auto;
+        height: auto;
+        padding: -4px -4px;
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 49px;
+    }
+    
 }
 
 
 @media (min-width: 750px) and (max-width: 1020px) {
-   
+
     #Home {
         width: 80%;
         max-width: 750px;
