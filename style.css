@@ -182,13 +182,12 @@ h6 {
     text-align: center;
 }
 /Responsive Movil/
-@media  (min-width: 320px) and (max-width: 600px) {
+@media  (min-width: 20px) and (max-width: 600px) {
 
  body {
-    
         background-position: top;
         background-size: 457vw;   
-    
+        text-align:center;
  }
 
     #logo {
