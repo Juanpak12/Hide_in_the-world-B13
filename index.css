@@ -68,3 +68,41 @@ a{
     font-size: 4em;
     text-decoration: none;
 }
+    /* Media queries para celulares en modo retrato y celular invertido */
+    @media (max-width: 480px) {
+      #logo {
+        width: 40vw;
+      }
+      .button {
+        padding: 8px 20px;
+      }
+      a {
+        font-size: 3em;
+      }
+    }
+
+    /* Media query para tablet */
+    @media (min-width: 481px) and (max-width: 768px) {
+      #logo {
+        width: 30vw;
+      }
+      .button {
+        padding: 12px 25px;
+      }
+      a {
+        font-size: 3.5em;
+      }
+    }
+
+    /* Media query para portátil mini */
+    @media (min-width: 769px) and (max-width: 1024px) {
+      #logo {
+        width: 25vw;
+      }
+      .button {
+        padding: 15px 30px;
+      }
+      a {
+        font-size: 4em;
+      }
+    }
