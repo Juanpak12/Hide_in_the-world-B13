@@ -122,7 +122,7 @@ function agregarJugador(nombre, departamento) {
         "./Media/Castevania Order of Ecclesia ost 02 Oncomming Dread.mp3",
         "./Media/Castevania Order of Ecclesia ost 01.mp3",
         "./Media/Castevania Order of Ecclesia ost 03 Heroic Dawning.mp3",        
-        "./",
+        "./Media/Castevania Order of Ecclesia ost 05 Vanishing.mp3",
         // Agrega más canciones si es necesario
     ];
 
