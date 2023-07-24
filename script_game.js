@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
             music.src = canciones[songNow];
             music.load(); // Carga la nueva canción
             music.play(); // Reproducir la canción
-            songNow = ++songNow;
+            songNow = (songNow + 1) % canciones.length;// Avanzar al siguiente índice de canción//
         } else {
             // Reiniciar el índice si se han reproducido todas las canciones
             songNow = 0;
@@ -116,30 +116,85 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.clear();
         window.location.href = "./home.html";
     });
-
     function showModal(departmentName) {
         modalContainer.classList.add("show");
-
-        const coderIndex = departmentList.findIndex((department) => department === departmentName);
-        if (coderIndex !== -1) {
-            const playerName = playerList[coderIndex];
+    
+        const player = playerList.find(player => player.department === departmentName);
+    
+        if (player) {
+            const playerName = player.name;
             alertPlayerDeleted.textContent = `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`;
             const listItem = document.createElement("li");
             listItem.textContent = `${playerName}, ${departmentName}`;
             deadCodersList.appendChild(listItem);
-            playerList.splice(coderIndex, 1);
-            departmentList.splice(coderIndex, 1);
+    
+            // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
+            playerList = playerList.filter(player => player.department !== departmentName);
             updateLocalStorage();
         } else {
             alertPlayerDeleted.textContent = `No se encontraron coders en el departamento ${departmentName}.`;
         }
-
+    
         const remainingDepartments = document.querySelectorAll("path:not(.killed)");
         if (remainingDepartments.length === 0) {
             isGameOver = true;
             showGameOver();
         }
     }
+    // Agregar esta variable para almacenar los nombres de los jugadores eliminados
+    let deadPlayerList = [];
+    
+    function showModal(departmentName) {
+        modalContainer.classList.add("show");
+    
+        const coderIndex = departmentList.findIndex((department) => department === departmentName);
+        if (coderIndex !== -1) {
+            const playerName = playerList[coderIndex].name;
+            alertPlayerDeleted.textContent = `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`;
+            const listItem = document.createElement("li");
+            listItem.textContent = `${playerName}, ${departmentName}`;
+            deadCodersList.appendChild(listItem);
+    
+            // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
+            playerList = playerList.filter((player) => player.department !== departmentName);
+            departmentList = departmentList.filter((department) => department !== departmentName);
+            updateLocalStorage();
+        } else {
+            alertPlayerDeleted.textContent = `No se encontraron coders en el departamento ${departmentName}.`;
+        }
+    
+        const remainingDepartments = document.querySelectorAll("path:not(.killed)");
+        if (remainingDepartments.length === 0) {
+            isGameOver = true;
+            showGameOver();
+        }
+    }
+
+    /*function showModal(departmentName) {
+        modalContainer.classList.add("show");
+    
+        const player = playerList.find(player => player.department === departmentName);
+    
+        if (player) {
+            const playerName = player.name;
+            alertPlayerDeleted.textContent = `¡El departamento ${departmentName} ha sido destruido! Ha muerto ${playerName}.`;
+            const listItem = document.createElement("li");
+            listItem.textContent = `${playerName}, ${departmentName}`;
+            deadCodersList.appendChild(listItem);
+    
+            // Filtra la lista de jugadores para mantener solo aquellos que no corresponden al departamento destruido
+            playerList = playerList.filter(player => player.department !== departmentName);
+            updateLocalStorage();
+        } else {
+            alertPlayerDeleted.textContent = `No se encontraron coders en el departamento ${departmentName}.`;
+        }
+    
+        const remainingDepartments = document.querySelectorAll("path:not(.killed)");
+        if (remainingDepartments.length === 0) {
+            isGameOver = true;
+            showGameOver();
+        }
+    }*/
 
     function hideModal() {
         modalContainer.classList.remove("show");
@@ -175,9 +230,24 @@ document.addEventListener("DOMContentLoaded", function () {
         gameIsOver.style.display = "none";
         gameOverButton.style.display = "none";
     }
-
     // Cargar los datos del almacenamiento local al cargar la página
+
     function loadLocalStorage() {
+        const storedPlayerList = localStorage.getItem("playerList");
+        const storedDepartmentList = localStorage.getItem("departmentList");
+        if (storedPlayerList && storedDepartmentList) {
+            playerList = JSON.parse(storedPlayerList);
+            departmentList = JSON.parse(storedDepartmentList);
+            console.log("Loaded playerList:", playerList);
+            console.log("Loaded departmentList:", departmentList);
+        }
+    
+        // Vaciar la lista de jugadores muertos al cargar el almacenamiento local
+        deadCodersList.innerHTML = "";
+    }
+    
+    
+    /*function loadLocalStorage() {
         const storedPlayerList = localStorage.getItem("playerList");
         const storedDepartmentList = localStorage.getItem("departmentList");
         playerList = storedPlayerList ? JSON.parse(storedPlayerList) : [];
@@ -188,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
             listItem.textContent = `${playerName}, ${departmentName}`;
             deadCodersList.appendChild(listItem);
         });
-    }
+    }*/
 
     loadLocalStorage(); // Cargar los datos al iniciar la página
     initGame(); // Iniciar el juego
