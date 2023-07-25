@@ -152,5 +152,21 @@ function agregarJugador(nombre, departamento) {
     // Iniciar la reproducción de la primera canción
     loadNextSong();
         // Ajustar el volumen del audio de fondo al 18%
+   // funcionalidad de audio de fondo en pagina//
+   document.addEventListener('DOMContentLoaded', function () {
+    let audio = document.getElementById("musica1");
+    audio.oncanplaythrough = function () {
+    audio.play();
+    };
+    })
+
+    function reproducirAudio() {
+        let audio = new Audio("./Media/O.K.mp3");
+        audio.play();
+        audio.onended = function () {
+          window.location.href = "./home.html";
+        };
+      }
+      document.getElementById("start").addEventListener("click", reproducirAudio);
         musica.volume = 0.18;
 });

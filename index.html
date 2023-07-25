@@ -19,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="96x96" href="../meta/favicons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../meta/favicons/favicon-16x16.png">
 </head>
-<body>
+<body >
     <div>
         <img id="logo" src="https://i.ibb.co/5sBrqjW/logovertical-colombia.png" width="100px" height="100px" alt="logo">
     </div>
@@ -32,23 +32,6 @@
         <source src="./Media/Castevania Order of Ecclesia ost 01.mp3" type="audio/mpeg" />
             Tu navegador no soporta audio MP3.
     </audio>
-    <script>
-    // funcionalidad de audio de fondo en pagina//
-      document.addEventListener('DOMContentLoaded', function () {
-        let audio = document.getElementById("musica1");
-        audio.oncanplaythrough = function () {
-        audio.play();
-        };
-        })
-
-        function reproducirAudio() {
-            var audio = new Audio("./Media/O.K.mp3");
-            audio.play();
-            audio.onended = function () {
-              window.location.href = "./home.html";
-            };
-          }
-          document.getElementById("start").addEventListener("click", reproducirAudio);
-    </script>
+    <script>"./script.js"</script>
 </body>
 </html>

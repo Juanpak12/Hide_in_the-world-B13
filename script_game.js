@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Iniciar la reproducción de la primera canción
     loadNextSong();
     // Ajustar el volumen del audio de fondo al 40%
-    music.volume = 0.18;
+    music.volume = 0.01;
 
     mapContainer.addEventListener("click", function (event) {
         if (isGameOver) return;
