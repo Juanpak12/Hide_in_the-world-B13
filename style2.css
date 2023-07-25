@@ -16,6 +16,9 @@ body{
     stroke-width: 2px;
 
 }
+#colombia {
+    fill:#0255c2;
+}
 /* css de la explosion al dar click*/
 
 #explosion-container {
